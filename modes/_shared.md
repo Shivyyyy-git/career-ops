@@ -31,10 +31,31 @@ The evaluation uses 6 blocks (A-F) with a global score of 1-5:
 |-----------|-----------------|
 | Match con CV | Skills, experience, proof points alignment |
 | North Star alignment | How well the role fits the user's target archetypes (from _profile.md) |
+| Interview Likelihood | How likely am I to get a callback given my profile vs this role? |
+| Timeline / Hiring Urgency | Is the role urgent? Fresh backfills and "immediate start" score highest |
 | Comp | Salary vs market (5=top quartile, 1=well below) |
 | Cultural signals | Company culture, growth, stability, remote policy |
-| Red flags | Blockers, warnings (negative adjustments) |
+| Red flags | Blockers, warnings (negative adjustments — see below) |
 | **Global** | Weighted average of above |
+
+### Scoring Weights
+
+<!-- Optimizing for speed-to-offer during active transition, not comp ceiling. -->
+
+| Dimension | Weight | Rationale |
+|-----------|--------|-----------|
+| Match con CV | 30% | Gate-pass — if skills don't match, nothing else matters |
+| North Star alignment | 25% | Must align with target AI PM archetypes |
+| Interview Likelihood | 20% | Speed-to-offer priority — how likely am I to get a callback? Consider: team size (smaller = faster), role urgency signals in JD, how well my proof points map to requirements |
+| Timeline / Hiring Urgency | 10% | Speed-to-offer priority — is the role urgent? Signals: "immediate start", "backfill", "growing team", posting age |
+| Comp | 10% | Secondary — any offer above $75K floor is acceptable during transition |
+| Cultural signals | 5% | Nice-to-have, not a deciding factor right now |
+
+> **Red flags** are not weighted — they are negative adjustments applied after the weighted score. A single critical red flag (e.g., company in active layoffs, role appears fake, visa-hostile employer) can drop the score by 0.5-1.0 points regardless of other dimensions.
+
+> **Interview Likelihood** is a new dimension not in the original system. When evaluating, assess: (1) how closely my CV matches their requirements, (2) company's current hiring velocity, (3) role posting age (fresh = higher likelihood), (4) whether the role is a backfill vs net-new, (5) seniority stretch (am I applying up? that lowers likelihood).
+
+> **Timeline** is also new. Assess from JD signals: "immediately", "ASAP", "start date Q2", team size mentions, whether it's a backfill. Older postings (30+ days) score lower on timeline.
 
 **Score interpretation:**
 - 4.5+ → Strong match, recommend applying immediately
