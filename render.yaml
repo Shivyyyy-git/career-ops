@@ -1,0 +1,78 @@
+# Career-Ops — Render Blueprint (Phase 1 MVP)
+#
+# NOTES
+# -----
+# * Python runtime does not include Node by default. scan.mjs (the portal
+#   scanner that morning_scan.py invokes) needs Node, so the buildCommand
+#   installs Node 20 via NodeSource before pip install.
+# * Cron schedules are UTC. "0 12 * * *" = 7 AM EST (UTC-5, winter). During
+#   EDT (March-Nov) it fires at 8 AM local. Re-set after DST if that matters.
+# * Env var values marked `sync: false` prompt you in the Render UI; we do
+#   not commit secrets. `AWS_REGION` has a default.
+
+services:
+  - type: web
+    name: career-ops-dashboard
+    runtime: python
+    plan: free
+    buildCommand: |
+      curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+      apt-get install -y nodejs
+      pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
+    envVars:
+      - key: GMAIL_USER
+        sync: false
+      - key: GMAIL_APP_PASSWORD
+        sync: false
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_REGION
+        value: us-east-1
+      - key: DASHBOARD_URL
+        sync: false
+
+  - type: cron
+    name: career-ops-morning-scan
+    runtime: python
+    plan: free
+    schedule: "0 12 * * *"  # 7 AM EST = 12 UTC (8 AM during EDT)
+    buildCommand: |
+      curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+      apt-get install -y nodejs
+      pip install -r requirements.txt
+    startCommand: python cron/morning_scan.py
+    envVars:
+      - key: GMAIL_USER
+        sync: false
+      - key: GMAIL_APP_PASSWORD
+        sync: false
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_REGION
+        value: us-east-1
+      - key: DASHBOARD_URL
+        sync: false
+
+  - type: cron
+    name: career-ops-eod-status
+    runtime: python
+    plan: free
+    schedule: "0 23 * * *"  # 6 PM EST = 23 UTC (7 PM during EDT)
+    buildCommand: pip install -r requirements.txt
+    startCommand: python cron/eod_status.py
+    envVars:
+      - key: GMAIL_USER
+        sync: false
+      - key: GMAIL_APP_PASSWORD
+        sync: false
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_REGION
+        value: us-east-1

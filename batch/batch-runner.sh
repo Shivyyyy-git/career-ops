@@ -32,7 +32,7 @@ MIN_SCORE=0
 usage() {
   cat <<'USAGE'
 career-ops batch runner — process job offers in batch via claude -p workers
-Uses your default Claude model (Claude Max subscription).
+Workers run on claude-sonnet-4-5 (interactive sessions keep their own default).
 
 Usage: batch-runner.sh [OPTIONS]
 
@@ -350,11 +350,12 @@ process_offer() {
     -e "s|{{ID}}|${esc_id}|g" \
     "$PROMPT_FILE" > "$resolved_prompt"
 
-  # Launch claude -p worker (uses default model from Claude Max subscription)
+  # Launch claude -p worker on Sonnet (batch-only; interactive sessions unaffected)
   local exit_code=0
   claude -p \
+    --model claude-sonnet-4-5 \
     --dangerously-skip-permissions \
-    --append-system-prompt-file "$resolved_prompt" \
+    --append-system-prompt "$(cat "$resolved_prompt")" \
     "$prompt" \
     > "$log_file" 2>&1 || exit_code=$?
 

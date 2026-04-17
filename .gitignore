@@ -27,6 +27,11 @@ modes/_profile.md
 node_modules/
 bun.lock
 
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
 # OS
 .DS_Store
 *.mov
@@ -37,3 +42,6 @@ bun.lock
 .claude/memory/
 career-dashboard
 package-lock.json
+
+__pycache__/
+*.pyc

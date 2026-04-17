@@ -18,8 +18,31 @@
 12. Genera HTML completo desde template + contenido personalizado
 13. Lee `name` de `config/profile.yml` → normaliza a kebab-case lowercase (e.g. "John Doe" → "john-doe") → `{candidate}`
 14. Escribe HTML a `/tmp/cv-{candidate}-{company}.html`
-15. Ejecuta: `node generate-pdf.mjs /tmp/cv-{candidate}-{company}.html output/cv-{candidate}-{company}-{YYYY-MM-DD}.pdf --format={letter|a4}`
-15. Reporta: ruta del PDF, nº páginas, % cobertura de keywords
+15. **Crea carpeta de aplicación:** `output/{Company Name} - {Role Title}/` (mkdir -p). Company y Role se usan tal cual (espacios, capitalización original). Dentro van:
+    - `Shivam Sharma Resume.pdf`
+    - `Cover Letter.pdf` (cuando se genere)
+    - `Job Description.md` (el JD extraído)
+    - `Application Notes.md` (notas de aplicación, score, recordatorios)
+    - `Company Research.md` (contexto de empresa: comp, contactos, noticias)
+16. Ejecuta: `node generate-pdf.mjs /tmp/cv-{candidate}-{company}.html "output/{Company Name} - {Role Title}/Shivam Sharma Resume.pdf" --format={letter|a4}`
+17. Reporta: ruta del PDF, nº páginas (debe ser 1), % cobertura de keywords
+18. **HARD RULE: Page count MUST be 1.** Si sale 2 páginas, aplica la jerarquía de tailoring por clase de rol (sección siguiente) en orden. NUNCA entregues un CV de 2 páginas.
+
+## Per-role tailoring hierarchy (ESC bullets)
+
+When the 1-page clip drops content, drop ESC bullets in this priority order based on the target role class. Classify by JD title and domain:
+
+| Role class | Examples | Default drop order |
+|---|---|---|
+| **Technical / embedded** | Decagon, Sierra, Glean FD, Scale AI FD, LangChain, LlamaIndex, Cohere Agent Harness, "Forward Deployed", "Solutions Engineer", "Applied AI" | **Drop ESC bullet #4 (mentor marketing) first.** Then #3 (17 admin APIs). Keep #1 (Maya AI) and #2 (n8n workflows). |
+| **Leadership** | Ramp Generalist, Cohere Platform, Glean AI Quality, Senior/Staff/Lead/Principal/Head/Director/VP titles | **Keep ESC bullet #4 (mentor).** Drop #3 (17 admin APIs) first, then #2 (n8n). Keep #1 (Maya AI) and #4. |
+| **Consulting firms** | Deloitte, McKinsey, BCG, PwC, EY, KPMG, Accenture, Slalom, Capgemini | **Keep ESC bullet #4 (mentor).** Drop #2 (n8n) first, then #3 (17 admin APIs). Keep #1 (Maya AI) and #4. |
+
+Rules:
+- ESC bullet #1 (Maya AI / 200K customers / $225K savings) is **never dropped** - it's the lead proof point in every variant.
+- If the page still overflows after dropping one ESC bullet, next cut targets: (a) oldest role's bullet count, then (b) the Summary, then (c) one Project.
+- VentureForge and the City of Rochester project are both retained by default. Only drop a Project as a last resort.
+- Classify the role BEFORE building the HTML and log the class + which bullet(s) were dropped in the evaluation report.
 
 ## Reglas ATS (parseo limpio)
 
