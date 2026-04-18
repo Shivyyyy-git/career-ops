@@ -27,7 +27,21 @@ const PIPELINE_PATH = 'data/pipeline.md';
 const APPLICATIONS_PATH = 'data/applications.md';
 
 // Ensure required directories exist (fresh setup)
-mkdirSync('data', { recursive: true });
+for (const dir of ['data', 'reports', 'output']) {
+  mkdirSync(dir, { recursive: true });
+}
+
+// ENOENT-tolerant read: returns '' when the file does not exist.
+// Used for user-state files (pipeline.md, scan-history.tsv, applications.md)
+// that may not be present on a fresh deploy (e.g., Render first boot).
+function readFileOrEmpty(path) {
+  try {
+    return readFileSync(path, 'utf-8');
+  } catch (err) {
+    if (err.code === 'ENOENT') return '';
+    throw err;
+  }
+}
 
 const CONCURRENCY = 10;
 const FETCH_TIMEOUT_MS = 10_000;
@@ -140,8 +154,9 @@ function loadSeenUrls() {
   const seen = new Set();
 
   // scan-history.tsv
-  if (existsSync(SCAN_HISTORY_PATH)) {
-    const lines = readFileSync(SCAN_HISTORY_PATH, 'utf-8').split('\n');
+  const history = readFileOrEmpty(SCAN_HISTORY_PATH);
+  if (history) {
+    const lines = history.split('\n');
     for (const line of lines.slice(1)) { // skip header
       const url = line.split('\t')[0];
       if (url) seen.add(url);
@@ -149,17 +164,17 @@ function loadSeenUrls() {
   }
 
   // pipeline.md — extract URLs from checkbox lines
-  if (existsSync(PIPELINE_PATH)) {
-    const text = readFileSync(PIPELINE_PATH, 'utf-8');
-    for (const match of text.matchAll(/- \[[ x]\] (https?:\/\/\S+)/g)) {
+  const pipeline = readFileOrEmpty(PIPELINE_PATH);
+  if (pipeline) {
+    for (const match of pipeline.matchAll(/- \[[ x]\] (https?:\/\/\S+)/g)) {
       seen.add(match[1]);
     }
   }
 
   // applications.md — extract URLs from report links and any inline URLs
-  if (existsSync(APPLICATIONS_PATH)) {
-    const text = readFileSync(APPLICATIONS_PATH, 'utf-8');
-    for (const match of text.matchAll(/https?:\/\/[^\s|)]+/g)) {
+  const apps = readFileOrEmpty(APPLICATIONS_PATH);
+  if (apps) {
+    for (const match of apps.matchAll(/https?:\/\/[^\s|)]+/g)) {
       seen.add(match[0]);
     }
   }
@@ -169,8 +184,8 @@ function loadSeenUrls() {
 
 function loadSeenCompanyRoles() {
   const seen = new Set();
-  if (existsSync(APPLICATIONS_PATH)) {
-    const text = readFileSync(APPLICATIONS_PATH, 'utf-8');
+  const text = readFileOrEmpty(APPLICATIONS_PATH);
+  if (text) {
     // Parse markdown table rows: | # | Date | Company | Role | ...
     for (const match of text.matchAll(/\|[^|]+\|[^|]+\|\s*([^|]+)\s*\|\s*([^|]+)\s*\|/g)) {
       const company = match[1].trim().toLowerCase();
@@ -188,7 +203,12 @@ function loadSeenCompanyRoles() {
 function appendToPipeline(offers) {
   if (offers.length === 0) return;
 
-  let text = readFileSync(PIPELINE_PATH, 'utf-8');
+  let text = readFileOrEmpty(PIPELINE_PATH);
+  // If file didn't exist, seed a minimal Pendientes / Procesadas skeleton so
+  // the logic below finds its markers and produces a valid output.
+  if (!text) {
+    text = '# Pipeline\n\n## Pendientes\n\n## Procesadas\n';
+  }
 
   // Find "## Pendientes" section and append after it
   const marker = '## Pendientes';
