@@ -1,0 +1,681 @@
+# Portal Scanner Configuration — Shivam Sharma
+# US-focused AI Product Manager target list
+#
+# Strategy (3 levels):
+#   1. Playwright → careers_url of each company (real-time, reliable)
+#   2. Greenhouse API → structured JSON (fast, Greenhouse-only)
+#   3. WebSearch with site: filters (broad discovery, may be stale)
+#
+# Geography: United States only (remote-US and hybrid-US both OK)
+
+# -- Title filter --
+title_filter:
+  positive:
+    - "Product Manager"
+    - "Technical PM"
+    - "Technical Product Manager"
+    - "AI"
+    - "ML"
+    - "LLM"
+    - "GenAI"
+    - "Generative AI"
+    - "Agentic"
+    - "Agent"
+    - "NLP"
+    - "LLMOps"
+    - "MLOps"
+    - "Platform PM"
+    - "Staff PM"
+    - "Group PM"
+    - "Principal PM"
+  negative:
+    - "Junior"
+    - "Intern"
+    - "Machine Learning Engineer"
+    - "Marketing Manager"
+    - "Project Manager"
+    - "Program Manager"
+    - "Community Manager"
+    - "Customer Success"
+    - "Sales"
+    - "Recruiter"
+    - "Designer"
+    - "iOS"
+    - "Android"
+    - "Blockchain"
+    - "Web3"
+    - "Crypto"
+  seniority_boost:
+    - "Senior"
+    - "Staff"
+    - "Principal"
+    - "Lead"
+    - "Head"
+    - "Director"
+    - "Group"
+
+# -- Search queries --
+# Each query triggers a WebSearch. Focused on AI PM roles, US geography.
+
+search_queries:
+
+  # -- Greenhouse --
+  - name: Greenhouse — AI Product Manager
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "AI Product Manager" United States OR remote'
+    enabled: true
+
+  - name: Greenhouse — Technical PM AI
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "Technical Product Manager" AI OR ML OR LLM United States OR remote'
+    enabled: true
+
+  - name: Greenhouse — AI/ML PM
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "AI/ML Product Manager" OR "ML Product Manager" United States OR remote'
+    enabled: true
+
+  - name: Greenhouse — PM LLM
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "Product Manager" LLM OR "large language model" OR GenAI United States OR remote'
+    enabled: true
+
+  - name: Greenhouse — Senior/Staff PM AI
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "Senior Product Manager" OR "Staff Product Manager" AI OR ML United States OR remote'
+    enabled: true
+
+  # -- Ashby --
+  - name: Ashby — AI Product Manager
+    query: 'site:jobs.ashbyhq.com "AI Product Manager" OR "Product Manager AI" United States OR remote'
+    enabled: true
+
+  - name: Ashby — Technical PM AI
+    query: 'site:jobs.ashbyhq.com "Technical Product Manager" AI OR ML OR LLM United States OR remote'
+    enabled: true
+
+  - name: Ashby — Senior/Staff PM AI
+    query: 'site:jobs.ashbyhq.com "Senior Product Manager" OR "Staff Product Manager" AI OR ML OR Agentic OR GenAI'
+    enabled: true
+
+  - name: Ashby — PM Agentic
+    query: 'site:jobs.ashbyhq.com "Product Manager" Agentic OR "AI Agent" OR orchestration OR workflow'
+    enabled: true
+
+  # -- Lever --
+  - name: Lever — AI Product Manager
+    query: 'site:jobs.lever.co "AI Product Manager" OR "Product Manager" AI OR ML United States OR remote'
+    enabled: true
+
+  - name: Lever — Senior PM AI
+    query: 'site:jobs.lever.co "Senior Product Manager" OR "Staff Product Manager" AI OR ML OR LLM OR GenAI'
+    enabled: true
+
+  # -- Workable --
+  - name: Workable — AI PM
+    query: 'site:apply.workable.com "Product Manager" AI OR ML OR LLM United States OR remote'
+    enabled: true
+
+  # -- General job boards --
+  - name: LinkedIn — AI PM
+    query: 'site:linkedin.com/jobs "AI Product Manager" OR "Technical Product Manager AI" OR "ML Product Manager" United States remote'
+    enabled: true
+
+  - name: YC Jobs — AI PM
+    query: 'site:workatastartup.com "Product Manager" AI OR ML OR LLM OR Agentic OR GenAI remote'
+    enabled: true
+
+  - name: ai-jobs.net — AI PM
+    query: 'site:ai-jobs.net "Product Manager" AI OR ML OR LLM remote United States'
+    enabled: true
+
+  - name: Wellfound — AI PM
+    query: 'site:wellfound.com "Product Manager" AI OR ML OR GenAI OR Agentic United States'
+    enabled: true
+
+  # -- Consulting firms & adjacent roles --
+  - name: Consulting — Solutions Consultant AI
+    query: '"Solutions Consultant AI" United States OR remote'
+    enabled: true
+
+  - name: Consulting — AI Implementation Manager
+    query: '"AI Implementation Manager" United States OR remote'
+    enabled: true
+
+  - name: Consulting — Technical Program Manager
+    query: '"Technical Program Manager" AI OR ML OR LLM OR GenAI United States OR remote'
+    enabled: true
+
+  - name: Consulting — Associate Product Manager
+    query: '"Associate Product Manager" AI OR ML OR GenAI United States OR remote'
+    enabled: true
+
+  - name: Consulting — AI Strategy Consultant
+    query: '"AI Strategy Consultant" United States OR remote'
+    enabled: true
+
+  - name: Consulting — Forward Deployed
+    query: '"Forward Deployed" AI OR ML OR LLM United States OR remote'
+    enabled: true
+
+  - name: Consulting — Solutions Architect AI
+    query: '"Solutions Architect" AI OR ML OR GenAI OR LLM United States OR remote'
+    enabled: true
+
+  - name: Consulting — AI Consultant
+    query: '"AI Consultant" United States OR remote'
+    enabled: true
+
+  - name: Consulting — Management Consultant AI
+    query: '"Management Consultant" AI OR "Data & AI" OR "Analytics" United States OR remote'
+    enabled: true
+
+# -- Tracked companies --
+# 65 companies across 10 tiers. US-focused AI PM roles.
+# scan_method: playwright (default), websearch, greenhouse_api
+
+tracked_companies:
+
+  # ============================================================
+  # TIER 1 — AI LABS
+  # ============================================================
+
+  - name: Anthropic
+    careers_url: https://job-boards.greenhouse.io/anthropic
+    api: https://boards-api.greenhouse.io/v1/boards/anthropic/jobs
+    tier: 1
+    notes: "Claude maker. SF/NYC/Seattle."
+    enabled: true
+
+  - name: OpenAI
+    careers_url: https://openai.com/careers
+    scan_method: websearch
+    scan_query: 'site:openai.com/careers "Product Manager" OR "PM"'
+    tier: 1
+    notes: "Custom careers page, no standard ATS."
+    enabled: true
+
+  - name: Google DeepMind
+    careers_url: https://www.deepmind.com/careers
+    scan_method: websearch
+    scan_query: 'site:deepmind.com/careers "Product Manager" OR "PM" United States'
+    tier: 1
+    notes: "London/SF/NYC. Roles also on Google careers."
+    enabled: true
+
+  - name: Meta AI (FAIR)
+    careers_url: https://www.metacareers.com/
+    scan_method: websearch
+    scan_query: 'site:metacareers.com "Product Manager" AI OR "FAIR" OR "GenAI" OR "LLM" United States'
+    tier: 1
+    notes: "FAIR roles listed on Meta Careers. Menlo Park/NYC/Seattle."
+    enabled: true
+
+  - name: xAI
+    careers_url: https://job-boards.greenhouse.io/xai
+    api: https://boards-api.greenhouse.io/v1/boards/xai/jobs
+    tier: 1
+    notes: "Grok maker. SF/Palo Alto."
+    enabled: true
+
+  - name: Perplexity
+    careers_url: https://jobs.ashbyhq.com/perplexity
+    tier: 1
+    notes: "AI-native search. SF."
+    enabled: true
+
+  - name: Mistral AI
+    careers_url: https://jobs.lever.co/mistral
+    tier: 1
+    notes: "Paris-based but has US roles."
+    enabled: true
+
+  - name: Cohere
+    careers_url: https://jobs.ashbyhq.com/cohere
+    tier: 1
+    notes: "Enterprise LLM. Toronto + SF + remote."
+    enabled: true
+
+  - name: Character.AI
+    careers_url: https://job-boards.greenhouse.io/characterai
+    api: https://boards-api.greenhouse.io/v1/boards/characterai/jobs
+    tier: 1
+    notes: "Conversational AI. SF."
+    enabled: true
+
+  - name: Inflection
+    careers_url: https://job-boards.greenhouse.io/inflectionai
+    api: https://boards-api.greenhouse.io/v1/boards/inflectionai/jobs
+    tier: 1
+    # Inflection pivoted after Microsoft hire; verify roles are still posted
+    notes: "Pi maker. Palo Alto. Post-pivot — verify active listings."
+    enabled: true
+
+  # ============================================================
+  # TIER 1 — BIG TECH (AI PM roles)
+  # ============================================================
+
+  - name: Google
+    careers_url: https://www.google.com/about/careers/
+    scan_method: websearch
+    scan_query: 'site:google.com/about/careers "Product Manager" AI OR ML OR "Gemini" OR "GenAI" United States'
+    tier: 1
+    notes: "Custom careers portal. Gemini, Cloud AI, Search AI."
+    enabled: true
+
+  - name: Meta
+    careers_url: https://www.metacareers.com/
+    scan_method: websearch
+    scan_query: 'site:metacareers.com "Product Manager" AI OR ML OR "GenAI" OR "Llama" United States'
+    tier: 1
+    notes: "Llama, AI Studio, Instagram AI. Menlo Park/NYC/Seattle."
+    enabled: true
+
+  - name: Amazon
+    careers_url: https://www.amazon.jobs/
+    scan_method: websearch
+    scan_query: 'site:amazon.jobs "Product Manager" AI OR ML OR "Bedrock" OR "Alexa" OR "GenAI" United States'
+    tier: 1
+    notes: "AWS Bedrock, Alexa, Amazon Q. Seattle/SF/NYC."
+    enabled: true
+
+  - name: Microsoft
+    careers_url: https://careers.microsoft.com/
+    scan_method: websearch
+    scan_query: 'site:careers.microsoft.com "Product Manager" AI OR "Copilot" OR "Azure AI" OR "GenAI" United States'
+    tier: 1
+    notes: "Copilot, Azure AI, Bing AI. Redmond/SF/NYC."
+    enabled: true
+
+  - name: Apple
+    careers_url: https://jobs.apple.com/
+    scan_method: websearch
+    scan_query: 'site:jobs.apple.com "Product Manager" AI OR ML OR "machine learning" OR "intelligence" United States'
+    tier: 1
+    notes: "Apple Intelligence, Siri, on-device ML. Cupertino/Seattle."
+    enabled: true
+
+  - name: NVIDIA
+    careers_url: https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite
+    scan_method: websearch
+    scan_query: 'site:nvidia.wd5.myworkdayjobs.com "Product Manager" AI OR ML OR "GenAI" OR "LLM"'
+    tier: 1
+    notes: "Workday ATS. GPU/AI infra. Santa Clara/Seattle/Remote."
+    enabled: true
+
+  # ============================================================
+  # TIER 2 — AI-FIRST STARTUPS
+  # ============================================================
+
+  - name: Scale AI
+    careers_url: https://job-boards.greenhouse.io/scaleai
+    api: https://boards-api.greenhouse.io/v1/boards/scaleai/jobs
+    tier: 2
+    notes: "Data labeling + AI platform. SF/NYC."
+    enabled: true
+
+  - name: Hugging Face
+    careers_url: https://apply.workable.com/huggingface/
+    scan_method: websearch
+    scan_query: 'site:apply.workable.com/huggingface "Product Manager" OR "PM"'
+    tier: 2
+    notes: "Workable ATS. ML hub. NYC/Paris/Remote."
+    enabled: true
+
+  - name: LangChain
+    careers_url: https://jobs.ashbyhq.com/langchain
+    tier: 2
+    notes: "LangChain/LangSmith/LangGraph. SF/Remote."
+    enabled: true
+
+  - name: Pinecone
+    careers_url: https://jobs.ashbyhq.com/pinecone
+    tier: 2
+    notes: "Vector database. SF/NYC."
+    enabled: true
+
+  - name: Weaviate
+    careers_url: https://job-boards.greenhouse.io/weaviate
+    api: https://boards-api.greenhouse.io/v1/boards/weaviate/jobs
+    tier: 2
+    notes: "Vector database. Amsterdam + remote-US."
+    enabled: true
+
+  - name: LlamaIndex
+    careers_url: https://jobs.ashbyhq.com/llamaindex
+    tier: 2
+    # Small team — may not have PM roles yet
+    notes: "RAG/data framework. SF. Small team."
+    enabled: true
+
+  - name: Together AI
+    careers_url: https://job-boards.greenhouse.io/togetherai
+    api: https://boards-api.greenhouse.io/v1/boards/togetherai/jobs
+    tier: 2
+    notes: "Open-source model inference. SF."
+    enabled: true
+
+  - name: Fireworks AI
+    careers_url: https://job-boards.greenhouse.io/fireworks
+    api: https://boards-api.greenhouse.io/v1/boards/fireworks/jobs
+    tier: 2
+    notes: "Fast LLM inference. SF/Remote."
+    enabled: true
+
+  - name: Replicate
+    careers_url: https://job-boards.greenhouse.io/replicate
+    api: https://boards-api.greenhouse.io/v1/boards/replicate/jobs
+    tier: 2
+    notes: "ML model hosting. SF/Remote."
+    enabled: true
+
+  - name: Modal
+    careers_url: https://job-boards.greenhouse.io/modal
+    api: https://boards-api.greenhouse.io/v1/boards/modal/jobs
+    tier: 2
+    notes: "Serverless GPU compute. SF/NYC."
+    enabled: true
+
+  - name: Anyscale
+    careers_url: https://job-boards.greenhouse.io/anyscale
+    api: https://boards-api.greenhouse.io/v1/boards/anyscale/jobs
+    tier: 2
+    notes: "Ray framework. SF."
+    enabled: true
+
+  # ============================================================
+  # TIER 3 — ENTERPRISE SAAS W/ AI
+  # ============================================================
+
+  - name: Salesforce
+    careers_url: https://careers.salesforce.com/
+    scan_method: websearch
+    scan_query: 'site:careers.salesforce.com "Product Manager" AI OR "Agentforce" OR "Einstein" OR GenAI United States'
+    tier: 3
+    notes: "Agentforce, Einstein AI. SF/Seattle/NYC."
+    enabled: true
+
+  - name: ServiceNow
+    careers_url: https://careers.servicenow.com/
+    scan_method: websearch
+    scan_query: 'site:careers.servicenow.com "Product Manager" AI OR ML OR "Now Assist" OR GenAI United States'
+    tier: 3
+    notes: "Now Assist AI. Santa Clara/San Diego."
+    enabled: true
+
+  - name: Workday
+    careers_url: https://workday.wd5.myworkdayjobs.com/Workday
+    scan_method: websearch
+    scan_query: 'site:workday.wd5.myworkdayjobs.com "Product Manager" AI OR ML United States'
+    tier: 3
+    notes: "Workday ATS. Pleasanton/Remote."
+    enabled: true
+
+  - name: Atlassian
+    careers_url: https://www.atlassian.com/company/careers
+    scan_method: websearch
+    scan_query: 'site:atlassian.com/company/careers "Product Manager" AI OR ML OR "intelligence" United States'
+    tier: 3
+    notes: "Rovo AI, Jira AI. SF/NYC/Remote."
+    enabled: true
+
+  - name: Notion
+    careers_url: https://job-boards.greenhouse.io/notion
+    api: https://boards-api.greenhouse.io/v1/boards/notion/jobs
+    tier: 3
+    notes: "Notion AI. SF/NYC."
+    enabled: true
+
+  - name: Asana
+    careers_url: https://job-boards.greenhouse.io/asana
+    api: https://boards-api.greenhouse.io/v1/boards/asana/jobs
+    tier: 3
+    notes: "Asana AI. SF."
+    enabled: true
+
+  - name: HubSpot
+    careers_url: https://job-boards.greenhouse.io/hubspot
+    api: https://boards-api.greenhouse.io/v1/boards/hubspot/jobs
+    tier: 3
+    notes: "Breeze AI. Cambridge MA/Remote."
+    enabled: true
+
+  # ============================================================
+  # TIER 3 — DEV TOOLS W/ AI
+  # ============================================================
+
+  - name: Vercel
+    careers_url: https://job-boards.greenhouse.io/vercel
+    api: https://boards-api.greenhouse.io/v1/boards/vercel/jobs
+    tier: 3
+    notes: "AI SDK, v0.dev. SF/Remote."
+    enabled: true
+
+  - name: Retool
+    careers_url: https://retool.com/careers
+    scan_method: websearch
+    scan_query: 'site:retool.com/careers "Product Manager" OR "PM" AI'
+    tier: 3
+    notes: "Custom careers page. Internal tools + AI. SF."
+    enabled: true
+
+  - name: Linear
+    careers_url: https://jobs.ashbyhq.com/linear
+    tier: 3
+    notes: "Project management + AI. SF/Remote."
+    enabled: true
+
+  - name: Figma
+    careers_url: https://job-boards.greenhouse.io/figma
+    api: https://boards-api.greenhouse.io/v1/boards/figma/jobs
+    tier: 3
+    notes: "Figma AI, Make. SF/NYC."
+    enabled: true
+
+  - name: GitHub
+    careers_url: https://www.github.careers/
+    scan_method: websearch
+    scan_query: 'site:github.careers "Product Manager" AI OR "Copilot" OR ML United States'
+    tier: 3
+    notes: "Copilot. SF/Seattle/Remote."
+    enabled: true
+
+  - name: GitLab
+    careers_url: https://job-boards.greenhouse.io/gitlab
+    api: https://boards-api.greenhouse.io/v1/boards/gitlab/jobs
+    tier: 3
+    notes: "Duo AI. All-remote."
+    enabled: true
+
+  - name: Cursor
+    careers_url: https://jobs.ashbyhq.com/anysphere
+    tier: 3
+    notes: "Ashby under Anysphere. AI code editor. SF."
+    enabled: true
+
+  - name: Codeium
+    careers_url: https://jobs.ashbyhq.com/codeium
+    tier: 3
+    # Rebranded to Windsurf; Ashby slug may still be codeium
+    notes: "Windsurf (fka Codeium). AI coding. Mountain View."
+    enabled: true
+
+  # ============================================================
+  # TIER 3 — FINTECH AI
+  # ============================================================
+
+  - name: Stripe
+    careers_url: https://stripe.com/jobs
+    scan_method: websearch
+    scan_query: 'site:stripe.com/jobs "Product Manager" AI OR ML United States'
+    tier: 3
+    notes: "Custom careers page. SF/Seattle/NYC."
+    enabled: true
+
+  - name: Ramp
+    careers_url: https://jobs.ashbyhq.com/ramp
+    tier: 3
+    notes: "AI-powered corporate cards. NYC."
+    enabled: true
+
+  - name: Brex
+    careers_url: https://job-boards.greenhouse.io/brex
+    api: https://boards-api.greenhouse.io/v1/boards/brex/jobs
+    tier: 3
+    notes: "AI expense management. SF/NYC/Remote."
+    enabled: true
+
+  - name: Mercury
+    careers_url: https://job-boards.greenhouse.io/mercury
+    api: https://boards-api.greenhouse.io/v1/boards/mercury/jobs
+    tier: 3
+    notes: "Startup banking + AI. SF/Portland/NYC/Remote."
+    enabled: true
+
+  - name: Plaid
+    careers_url: https://job-boards.greenhouse.io/plaid
+    api: https://boards-api.greenhouse.io/v1/boards/plaid/jobs
+    tier: 3
+    notes: "Financial data infra. SF/NYC."
+    enabled: true
+
+  # ============================================================
+  # TIER 3 — VERTICAL AI
+  # ============================================================
+
+  - name: Harvey
+    careers_url: https://job-boards.greenhouse.io/harvey
+    api: https://boards-api.greenhouse.io/v1/boards/harvey/jobs
+    tier: 3
+    notes: "Legal AI. SF/NYC."
+    enabled: true
+
+  - name: Hippocratic AI
+    careers_url: https://job-boards.greenhouse.io/hippocraticai
+    api: https://boards-api.greenhouse.io/v1/boards/hippocraticai/jobs
+    tier: 3
+    notes: "Healthcare AI agents. Palo Alto."
+    enabled: true
+
+  - name: Abridge
+    careers_url: https://job-boards.greenhouse.io/abridge
+    api: https://boards-api.greenhouse.io/v1/boards/abridge/jobs
+    tier: 3
+    notes: "Clinical AI documentation. Pittsburgh/SF."
+    enabled: true
+
+  - name: Glean
+    careers_url: https://job-boards.greenhouse.io/gleanwork
+    api: https://boards-api.greenhouse.io/v1/boards/gleanwork/jobs
+    tier: 3
+    notes: "Enterprise AI search. Palo Alto."
+    enabled: true
+
+  - name: Sierra
+    careers_url: https://jobs.ashbyhq.com/sierra
+    tier: 3
+    notes: "AI customer agents. Bret Taylor. SF."
+    enabled: true
+
+  - name: Decagon
+    careers_url: https://jobs.ashbyhq.com/decagon
+    tier: 3
+    notes: "AI customer support agents. SF."
+    enabled: true
+
+  - name: Cresta
+    careers_url: https://job-boards.greenhouse.io/craborinc
+    api: https://boards-api.greenhouse.io/v1/boards/craborinc/jobs
+    tier: 3
+    # Greenhouse slug is craborinc (corporate entity name)
+    notes: "Real-time AI for contact centers. SF."
+    enabled: true
+
+  - name: Sana
+    careers_url: https://job-boards.greenhouse.io/saborinc
+    scan_method: websearch
+    scan_query: '"sana.ai" OR "sanalabs" "Product Manager" OR "PM" site:job-boards.greenhouse.io OR site:jobs.ashbyhq.com'
+    tier: 3
+    # Greenhouse slug unverified — may differ
+    notes: "AI learning & knowledge platform. Stockholm + NYC."
+    enabled: true
+
+  - name: Writer
+    careers_url: https://job-boards.greenhouse.io/writer
+    api: https://boards-api.greenhouse.io/v1/boards/writer/jobs
+    tier: 3
+    notes: "Enterprise AI writing platform. SF/NYC."
+    enabled: true
+
+  # ============================================================
+  # TIER 4 — CONSULTING FIRMS (AI practices)
+  # ============================================================
+  # All custom careers portals — no standard ATS APIs.
+  # Uses websearch fallback; expect noisier results than Tier 1-3.
+
+  - name: Deloitte
+    careers_url: https://apply.deloitte.com/
+    scan_method: websearch
+    scan_query: 'site:apply.deloitte.com "AI" OR "Analytics" "Manager" OR "Consultant" OR "Product Manager" United States'
+    tier: 4
+    notes: "AI & Analytics practice. US-wide."
+    enabled: true
+
+  - name: Accenture
+    careers_url: https://www.accenture.com/careers
+    scan_method: websearch
+    scan_query: 'site:accenture.com/careers "AI" OR "GenAI" "Manager" OR "Consultant" OR "Product Manager" United States'
+    tier: 4
+    notes: "AI practice (Accenture Applied Intelligence). US-wide."
+    enabled: true
+
+  - name: McKinsey & Company
+    careers_url: https://www.mckinsey.com/careers
+    scan_method: websearch
+    scan_query: 'site:mckinsey.com/careers "QuantumBlack" OR "AI" OR "Analytics" United States'
+    tier: 4
+    notes: "QuantumBlack (AI arm). NYC/SF/Chicago/Boston."
+    enabled: true
+
+  - name: BCG
+    careers_url: https://careers.bcg.com/
+    scan_method: websearch
+    scan_query: 'site:careers.bcg.com "BCG X" OR "BCG Gamma" OR "AI" OR "Data Scientist" OR "Product Manager" United States'
+    tier: 4
+    notes: "BCG X / BCG Gamma. NYC/SF/Boston."
+    enabled: true
+
+  - name: PwC
+    careers_url: https://www.pwc.com/careers
+    scan_method: websearch
+    scan_query: 'site:pwc.com/careers "AI" OR "GenAI" OR "New Ventures" "Manager" OR "Product Manager" United States'
+    tier: 4
+    notes: "New Ventures / AI practice. US-wide."
+    enabled: true
+
+  - name: EY
+    careers_url: https://www.eycareers.com/
+    scan_method: websearch
+    scan_query: 'site:eycareers.com "EY.ai" OR "AI" OR "GenAI" "Manager" OR "Consultant" OR "Product Manager" United States'
+    tier: 4
+    notes: "EY.ai. US-wide."
+    enabled: true
+
+  - name: KPMG
+    careers_url: https://www.kpmg.com/careers
+    scan_method: websearch
+    scan_query: 'site:kpmg.com/careers "Lighthouse" OR "AI" OR "GenAI" "Manager" OR "Consultant" United States'
+    tier: 4
+    notes: "KPMG Lighthouse (AI & Data). US-wide."
+    enabled: true
+
+  - name: Slalom
+    careers_url: https://www.slalom.com/careers
+    scan_method: websearch
+    scan_query: 'site:slalom.com/careers "AI" OR "GenAI" OR "ML" "Consultant" OR "Manager" OR "Product Manager" United States'
+    tier: 4
+    notes: "Modern consulting. Seattle HQ, US-wide."
+    enabled: true
+
+  - name: Capgemini
+    careers_url: https://www.capgemini.com/careers
+    scan_method: websearch
+    scan_query: 'site:capgemini.com/careers "AI" OR "GenAI" OR "Data & AI" "Manager" OR "Consultant" United States'
+    tier: 4
+    notes: "AI practice / Capgemini Invent. US-wide."
+    enabled: true

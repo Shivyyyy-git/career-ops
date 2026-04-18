@@ -16,8 +16,10 @@ jds/*
 !jds/.gitkeep
 
 # User config and customization (never auto-updated)
+# NOTE: portals.yml was removed from this list so the Render web service can
+# run scan.mjs at runtime. portals.yml contains no secrets — only company
+# names, public careers URLs, and title filters.
 config/profile.yml
-portals.yml
 modes/_profile.md
 .update-dismissed
 .update-lock
