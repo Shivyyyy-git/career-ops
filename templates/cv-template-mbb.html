@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+<meta charset="UTF-8">
+<title>{{NAME}} - Resume</title>
+<style>
+  /*
+   * ============================================================
+   *  SHIVAM SHARMA - MBB CLASSIC RESUME TEMPLATE (v1.0)
+   * ============================================================
+   *  For McKinsey / BCG / Bain and other management-consulting
+   *  applications. Serif throughout, centered header, no summary,
+   *  no subtitle under name.
+   *
+   *  HARD RULES:
+   *    - 1 page Letter, 0.75in margins (set via --margin=0.75in
+   *      flag on generate-pdf.mjs).
+   *    - Serif font stack: 'EB Garamond', 'Garamond', 'Cambria',
+   *      'Georgia', serif.
+   *    - Name centered, all caps, 16pt, letter-spacing 0.08em.
+   *    - Contact line 9pt gray, bullet separators.
+   *    - Section headers 10pt bold uppercase with 0.5pt rule.
+   *    - Company bold; location italic suffix; date right-aligned.
+   *    - Role italic line below company.
+   *    - Bullets 10pt, disc, single line preferred.
+   *    - No Summary section. No subtitle under name.
+   *    - Additional section combines Leadership + Technical.
+   *  ============================================================
+   */
+
+  @page { size: Letter; margin: 0.75in; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    font-family: 'EB Garamond', 'Garamond', 'Cambria', 'Georgia', serif;
+    font-size: 10pt;
+    line-height: 1.3;
+    color: #000;
+    background: #fff;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 7in;
+    margin: 0 auto;
+    max-height: 9.5in;
+    overflow: hidden;
+  }
+
+  .header { text-align: center; margin-bottom: 4px; }
+  .header h1 {
+    font-size: 16pt;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+  .contact-row {
+    font-size: 9pt;
+    color: #555;
+  }
+  .contact-row a { color: #555; text-decoration: none; }
+  .contact-sep { padding: 0 5px; color: #888; }
+
+  .header-rule {
+    border: 0;
+    border-top: 1pt solid #000;
+    margin: 4px 0 8px;
+  }
+
+  .section { margin-top: 6px; }
+  .section-title {
+    font-size: 10pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 0.5pt solid #000;
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+  }
+
+  .job { margin-bottom: 6px; }
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .company {
+    font-weight: 700;
+    font-size: 10pt;
+  }
+  .company .location {
+    font-weight: 400;
+    font-style: italic;
+  }
+  .job-date {
+    font-size: 10pt;
+    white-space: nowrap;
+  }
+  .role-line {
+    font-style: italic;
+    font-size: 10pt;
+    margin-bottom: 1px;
+  }
+  .job ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 18px;
+    margin-top: 2px;
+  }
+  .job li {
+    font-size: 10pt;
+    line-height: 1.3;
+    margin-bottom: 1px;
+  }
+
+  .edu-line {
+    font-size: 10pt;
+    line-height: 1.35;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .edu-line .edu-main { flex: 1; }
+  .edu-line .edu-main strong { font-weight: 700; }
+  .edu-date { white-space: nowrap; }
+
+  .additional p {
+    font-size: 10pt;
+    line-height: 1.35;
+    margin-bottom: 2px;
+  }
+  .additional .label {
+    font-weight: 700;
+  }
+
+  a { color: #000; }
+
+  .avoid-break, .job, .section { break-inside: avoid; page-break-inside: avoid; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header avoid-break">
+    <h1>{{NAME}}</h1>
+    <div class="contact-row">
+      <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>
+      <span class="contact-sep">&bull;</span>
+      <span>{{PHONE}}</span>
+      <span class="contact-sep">&bull;</span>
+      <a href="{{LINKEDIN_URL}}">{{LINKEDIN_DISPLAY}}</a>
+      <span class="contact-sep">&bull;</span>
+      <a href="{{PORTFOLIO_URL}}">{{PORTFOLIO_DISPLAY}}</a>
+    </div>
+    <hr class="header-rule">
+  </div>
+
+  <div class="section">
+    <div class="section-title">Experience</div>
+    {{EXPERIENCE}}
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Education</div>
+    {{EDUCATION}}
+  </div>
+
+  <div class="section additional avoid-break">
+    <div class="section-title">Additional</div>
+    {{ADDITIONAL}}
+  </div>
+
+</div>
+</body>
+</html>

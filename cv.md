@@ -15,7 +15,7 @@ AI Product Manager with an MS in Artificial Intelligence (STEM) from Simon Busin
 ### AI Product Manager | January 2026 - Present
 *ESC Partners* | *Rochester, New York*
 
-- Architected **Maya AI** on AWS Bedrock with prompt logic, HITL approval, and tenant governance, for **200K utility customers** and projected **$225K/month savings**.
+- Architected **Maya AI** on AWS Bedrock with prompt logic, HITL approval, and tenant governance; automates first-touch response for **70-80%** of NEP's inbound support volume, removing roughly **100+ manual emails per manager per day**.
 - Shipped **4 production n8n workflows** automating customer email triage, routing, approval, and send across all support channels.
 - Delivered enterprise onboarding: **17 admin APIs**, 24-hour key rotation, DynamoDB-backed multi-tenant isolation, and self-serve client setup.
 - Lead and mentor a marketing team member on AI-assisted campaign design and content operations.
