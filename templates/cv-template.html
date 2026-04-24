@@ -7,48 +7,49 @@
 <style>
   /*
    * ============================================================
-   *  SHIVAM SHARMA - ONE-PAGE RESUME TEMPLATE (v8.1)
+   *  SHIVAM SHARMA - ONE-PAGE RESUME TEMPLATE (v9 - Calibri)
    * ============================================================
-   *  HEADER (centered):
-   *    - Name "SHIVAM SHARMA" all caps, 20pt, weight 700, letter-spacing 0.04em
-   *    - Contact line centered with pipe separators:
-   *        email | phone | linkedin.com/in/shivamsharma-ai | shivam.website
-   *    - NO "Open to relocation" (moved to cover letter)
-   *    - NO GitHub link (cover letter only)
+   *  Visual spec mirrors user's master resume at
+   *  ~/Desktop/Resume (2026)/Shivam Sharma Resume.pdf.
    *
-   *  SECTIONS (fixed order):
-   *    1. SUMMARY
-   *    2. PROFESSIONAL EXPERIENCE (4 roles)
-   *    3. EDUCATION (3 entries; McKinsey on one line)
-   *    4. PROJECTS (2 one-line entries, no dates/locations)
-   *    5. SKILLS (3 categories)
+   *  HEADER (centered):
+   *    - Name "SHIVAM SHARMA" all caps, 15pt, weight 700, letter-spacing 0.03em
+   *    - Contact line centered with pipe separators:
+   *        email | phone | linkedin.com/in/shivamsharma-ai | www.shivam.website
+   *    - Links styled in Word blue (#0563c1) underlined
+   *    - NO GitHub link in header (add to Projects section instead if relevant)
+   *
+   *  SECTIONS (fixed order, no Summary by default):
+   *    1. PROFESSIONAL EXPERIENCE (3-5 roles)
+   *    2. EDUCATION (Simon + McKinsey one-liner + UCL)
+   *    3. PROJECTS (1-2 one-line entries, no dates/locations)
+   *    4. SKILLS (Product Management first, then AI/Platform & Tools)
    *
    *  FORMATTING RULES:
-   *    - Pure black (#000) on white only.
-   *    - Font: Inter or IBM Plex Sans (ATS-safe).
-   *    - Body 10.5pt, role titles 11pt bold, section headers 11pt uppercase bold (0.06em tracking).
-   *    - Section headers: full-width 1px solid #000 bottom border.
-   *    - Metrics bold weight 600 (subtle, professional - NOT 700).
-   *    - Bullets: disc markers, 16px left padding.
-   *    - NEVER use em-dash (-) in content. Use hyphen, comma, semicolon, colon instead.
-   *    - Date format: "January 2026 - Present" (full month names, hyphen-space).
+   *    - Pure black (#000) on white. Links in Word blue.
+   *    - Font: Calibri, Aptos, Segoe UI, Helvetica, Arial fallback.
+   *    - Body 10pt, role titles 10.5pt bold, section headers 10.5pt uppercase bold.
+   *    - Section headers: full-width 1px solid #000 bottom border, clear margin-top.
+   *    - Bold the lead phrase of each bullet (first clause before comma) — draws the eye.
+   *    - Metrics bold weight 700 inside bullet text.
+   *    - Bullets: disc markers, 17px left padding.
+   *    - Dates: use en-dash (–) NOT hyphen (-) and NOT em-dash (—).
    *    - Role block layout (two-line header):
-   *        Line 1: role-title (bold, left)     date (right-aligned)
-   *        Line 2: company-name (italic, left) location (italic, right-aligned)
-   *    - ONE PAGE HARD LIMIT. On overflow, apply role-class tailoring from modes/pdf.md:
-   *        * technical/embedded roles: drop ESC bullet #4 (mentor) first
-   *        * leadership roles: drop ESC bullet #3 (17 admin APIs) first, keep mentor
-   *        * consulting firms: drop ESC bullet #2 (n8n) first, keep mentor
+   *        Line 1: role-title (bold, left)  date (bold, en-dash, right-aligned)
+   *        Line 2: company-name (bold, left) location (bold, right-aligned)
+   *    - ONE PAGE HARD LIMIT. Prefer tightening bullets or dropping a role over
+   *      collapsing section spacing (user-layer rule: sections must be visually separated).
+   *    - Every rendered line must have >= 4 words. Rewrite orphan tails.
+   *    - City of Rochester project MUST credit "Simon Vision Consulting" engagement.
    *
    *  COVER LETTER (separate template):
-   *    Closing includes 3 proof links (live demo, walkthrough, portfolio).
-   *    References "HometownHUB" as the public-facing brand for ESC work.
+   *    Matches this Calibri format. References "Hometown Hub" as public-facing ESC brand.
    * ============================================================
    */
 
   @page {
     size: Letter;
-    margin: 0.4in;
+    margin: 0.4in 0.55in;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -56,9 +57,9 @@
   html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
   body {
-    font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 10.5pt;
-    line-height: 1.22;
+    font-family: 'Calibri', 'Aptos', 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+    font-size: 10pt;
+    line-height: 1.2;
     color: #000;
     background: #fff;
   }
@@ -76,46 +77,46 @@
   /* === HEADER (centered) === */
   .header {
     text-align: center;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
 
   .header h1 {
-    font-size: 20pt;
+    font-size: 15pt;
     font-weight: 700;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
     line-height: 1.15;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     color: #000;
   }
 
   .contact-row {
-    font-size: 10.5pt;
+    font-size: 10pt;
     line-height: 1.3;
     color: #000;
   }
 
   .contact-row a {
-    color: #000;
-    text-decoration: none;
+    color: #0563c1;
+    text-decoration: underline;
   }
 
   .contact-sep {
-    padding: 0 6px;
+    padding: 0 3px;
   }
 
   /* === SECTION HEADERS === */
-  .section { margin-top: 1px; }
+  .section { margin-top: 8px; }
 
   .section-title {
-    font-size: 11pt;
+    font-size: 10.5pt;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.03em;
     color: #000;
     border-bottom: 1px solid #000;
-    padding-bottom: 1px;
-    margin-bottom: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 6px;
   }
 
   /* === SUMMARY === */
@@ -126,7 +127,7 @@
   }
 
   /* === EXPERIENCE (two-line role header) === */
-  .job { margin-bottom: 2px; }
+  .job { margin-bottom: 6px; }
 
   .role-header,
   .company-header {
@@ -140,29 +141,30 @@
   .company-header { margin-bottom: 1px; }
 
   .role-title {
-    font-size: 11pt;
+    font-size: 10.5pt;
     font-weight: 700;
     color: #000;
   }
 
   .company-name {
-    font-size: 10.5pt;
-    font-style: italic;
-    font-weight: 400;
+    font-size: 10pt;
+    font-style: normal;
+    font-weight: 700;
     color: #000;
   }
 
   .job-period {
     font-size: 10.5pt;
-    font-weight: 400;
+    font-weight: 700;
     color: #000;
     white-space: nowrap;
     text-align: right;
   }
 
   .job-location {
-    font-size: 10.5pt;
-    font-style: italic;
+    font-size: 10pt;
+    font-style: normal;
+    font-weight: 700;
     color: #000;
     white-space: nowrap;
     text-align: right;
@@ -171,28 +173,29 @@
   .job ul {
     list-style-type: disc;
     list-style-position: outside;
-    padding-left: 16px;
-    margin-top: 1px;
+    padding-left: 17px;
+    margin-top: 3px;
   }
 
   .job li {
     display: list-item;
     list-style-type: disc;
-    font-size: 10.5pt;
+    font-size: 10pt;
     line-height: 1.22;
     color: #000;
-    margin-bottom: 0;
+    margin-bottom: 2px;
   }
 
-  /* Metrics - weight 600 per spec (subtle, professional) */
+  /* Bold lead phrase and metrics - weight 700 */
   .job li strong,
   .job li b,
   .job li .metric,
   .metric,
   .summary-text strong,
   .projects-list strong,
+  .project-line strong,
   .edu-main strong {
-    font-weight: 600;
+    font-weight: 700;
     color: #000;
   }
 

@@ -65,7 +65,7 @@ Leadership: VP, Masters Advisory Council; Simon Strong Community Builder Award.
 - **VaultIQ:** Internal air-gapped financial intelligence platform running Claude Opus on AWS Bedrock; extracts line items, surfaces trends, and generates predictions from analyst documents without data leaving the customer VPC. Stack: Next.js, Postgres/pgvector, Terraform, SSO, role-based access.
 - **Conference Outreach Automation:** 3-workflow outreach system for the CRO targeting Oracle CIS conference attendees — Teams adaptive card approvals, Outlook sending, edit form for AI-drafted copy. Stack: n8n, Claude Code.
 - **Career-Ops Pipeline:** AI job-search pipeline built on Claude Code — scans portals, evaluates JDs, generates tailored CVs and cover letters, tracks applications end-to-end. [github.com/Shivyyyy-git](https://github.com/Shivyyyy-git)
-- **City of Rochester, Fraud Detection ML System:** Explainable ML model (XGBoost, SHAP) improving accuracy from **62% to 73%**; enhanced decision transparency for loan officers.
+- **City of Rochester, Fraud Detection ML System — Simon Vision Consulting engagement:** Explainable ML model (XGBoost, SHAP) improving accuracy from **62% to 73%**; enhanced decision transparency for loan officers.
 
 ---
 
