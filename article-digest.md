@@ -6,17 +6,33 @@ Detailed project descriptions for tailored CVs, cover letters, and interview pre
 
 ### Maya AI
 
-**Enterprise AI email triage and response platform serving 200K utility customers, projected to save $225K/month.**
+**Full AI operating layer on Oracle CCS unifying voice, chat, SMS, email, and mobile for a 200K-resident utility — built in 2.5 months as the sole AI person.**
 
-**Problem:** Nationwide Energy Partners handles massive volumes of customer emails — billing questions, payment issues, account changes — all manually triaged and answered by support staff. At 200K customers, this doesn't scale. Response times lag, quality varies by agent, and the cost per interaction keeps climbing.
+**Problem:** Utility companies (Nationwide Energy Partners and similar) run everything on Oracle CCS — billing, outages, service requests, payment plans. When a customer calls, chats, or emails, a human agent logs in, digs through Oracle, and manually responds. At 200K+ residents, this doesn't scale. Response times lag, quality varies by agent, and the cost per interaction climbs. Multi-language support is non-existent for a significant non-English speaking customer base.
 
-**Solution:** Built Maya AI end-to-end: an AI-powered email classification and response system. Inbound emails hit an n8n workflow that classifies intent via AWS Bedrock (Claude Sonnet, Nova Pro), generates a templated or AI-written reply, and routes it to a Microsoft Teams channel as an adaptive card. Managers review and tap Approve, Edit, or Deny — each triggering a dedicated handler workflow. Approve sends the response via Outlook. Edit opens a form for revisions. Deny logs the rejection and flags for manual follow-up. The system also interprets legacy Oracle CCS scripts and drafts new ones, reducing licensing costs and protecting client IP.
+**Solution:** Built Maya AI end-to-end: an AI operating layer that sits on top of Oracle CCS and handles customer interactions autonomously across all channels. The agent understands customer intent across voice, chat, SMS, email, and mobile; pulls the right data from Oracle; and executes transactions (billing queries, payment plans, start/stop service, outage reporting) without human intervention. When uncertain, Maya drafts a response, pings a supervisor in Microsoft Teams via an adaptive card, and waits for one-click approval before sending. Also shipped a standalone email-triage agent spun off from Maya's core intelligence that routes, drafts, and sends resident support emails using Claude Code. Supervisor cockpit provides real-time sentiment analysis, agent performance tracking, and one-click human takeover. 11 Labs integration delivers 26-language voice coverage.
 
-**Stack:** AWS Bedrock (Claude Sonnet, Nova Pro), n8n (4 production workflows), Microsoft Teams (adaptive cards + webhooks), Microsoft Outlook, Oracle CCS, AWS DynamoDB, 17 admin APIs for enterprise onboarding, 24-hour key rotation, real-time support dashboard.
+**Stack:** AWS Bedrock (Claude Sonnet, Claude Opus, Nova Pro), FastAPI, n8n (production workflows for triage + approval flows), React (supervisor cockpit), Microsoft Teams (adaptive cards + webhooks), Microsoft Outlook, Oracle CCS, AWS DynamoDB (tenant governance), 11 Labs voice, 17 admin APIs for enterprise onboarding, 24-hour key rotation, Claude Code.
 
-**Outcome:** Projected $225K/month savings. 4 production workflows live. Enterprise onboarding with self-serve client setup, DynamoDB-backed tenant governance, and multi-channel support (chat, voice, email, SMS). HITL approval flow builds trust with non-technical stakeholders — managers stay in control without touching the underlying system.
+**Outcome:** Handles 70-80% of first-touch support volume; removes 100+ manual emails per manager per day. Deployed at NEP (200K+ residents); rolling out at Moreno Valley Electrical Utility; piloting at Delta Utilities. Any Oracle Utilities client can plug in. Projected ~$225K/month savings at NEP. HITL approval flow builds trust with non-technical supervisors — they stay in control without touching the underlying system. Built end-to-end in 2.5 months as the sole AI person at ESC Partners.
 
-**Archetypes this supports:** Technical AI PM, Agentic PM, AI Platform/LLMOps PM
+**Archetypes this supports:** AI Product Builder, Technical AI PM, Agentic PM, AI Platform/LLMOps PM, Forward Deployed Engineer, Vertical/Enterprise AI PM
+
+---
+
+### VaultIQ
+
+**Internal air-gapped financial intelligence platform running Claude Opus on AWS Bedrock — data never leaves the customer VPC.**
+
+**Problem:** Financial analyst teams work with sensitive documents — earnings files, deal memos, client statements — that cannot leave the customer's private network. Off-the-shelf AI tools require sending data to third-party APIs, which is a compliance non-starter for regulated clients. Manual document review doesn't scale as deal volume grows.
+
+**Solution:** Built an internal financial intelligence platform that runs entirely inside the customer VPC. The platform extracts line items from analyst documents, surfaces trends across periods and entities, and generates forward predictions — all powered by Claude Opus hosted on AWS Bedrock inside the customer's AWS account. Data never leaves the VPC. SSO + role-based access ensures the right analysts see the right slices. Deployed via Terraform for reproducible customer installs.
+
+**Stack:** Claude Opus (AWS Bedrock, in-VPC), Next.js (analyst UI), Postgres with pgvector (document retrieval), Terraform (customer VPC deployment), SSO, role-based access control.
+
+**Outcome:** Compliance-grade AI for regulated financial clients without sending data outside their boundary. Replaces manual analyst document review with automated extraction and trend surfacing. Reusable deployment pattern (Terraform-defined) reduces per-customer onboarding time.
+
+**Archetypes this supports:** AI Product Builder, Forward Deployed Engineer, Technical AI PM, AI Platform/LLMOps PM, Vertical/Enterprise AI PM
 
 ---
 
