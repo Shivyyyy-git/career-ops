@@ -9,4 +9,4 @@ The AI Factory role reads like the next logical step for how I already work. I f
 Available immediately and open to relocate.
 
 **Shivam Sharma**
-shivamsharma2023@gmail.com | (585) 481-9927 | linkedin.com/in/shivamsharma-ai | www.shivam.website
+shivamsharma2023@gmail.com | (585) 481-9927 | linkedin.com/in/shivamsharma-ai | shivamsportfolio.webflow.io

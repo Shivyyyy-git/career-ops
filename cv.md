@@ -1,6 +1,6 @@
 # SHIVAM SHARMA
 
-shivamsharma2023@gmail.com | (585) 481-9927 | [linkedin.com/in/shivamsharma-ai](https://www.linkedin.com/in/shivamsharma-ai/) | [shivam.website](https://shivamsportfolio.webflow.io/) | [github.com/Shivyyyy-git](https://github.com/Shivyyyy-git)
+shivamsharma2023@gmail.com | (585) 481-9927 | [linkedin.com/in/shivamsharma-ai](https://www.linkedin.com/in/shivamsharma-ai/) | [shivamsportfolio.webflow.io](https://shivamsportfolio.webflow.io/) | [github.com/Shivyyyy-git](https://github.com/Shivyyyy-git)
 
 ---
 
@@ -28,13 +28,15 @@ AI Product Engineer with an MS in Artificial Intelligence (STEM) from Simon Busi
 - Built AI recommendation product processing **300+ weekly consultations**, matching senior families to **250+ communities** in under 2 seconds.
 - Designed 8-factor scoring algorithm cutting API costs by **~70%** via two-phase pre-filtering with real-time voice transcription.
 
-### AI Product Lead | March 2025 - December 2025
-*Ain Foundry, University of Rochester* | *Rochester, New York*
+### Graduate AI Product Intern | January 2025 - December 2025
+*Ain Center for Entrepreneurship and Innovation, University of Rochester* | *Rochester, New York*
+
+*Paid graduate internship under faculty supervision (visiting MIT faculty advisor).*
 
 - Shipped **VentureForge**, an AI strategy simulation for **50+** MBA students and self-serve validation tooling for **200+** founders, replacing **$25K/year** in licensed tools and cutting mentor prep time by **75%**.
 
-### Summer Associate, Product (AI) | May 2025 - December 2025
-*Stealth AI Startup* | *Pleasanton, CA*
+### AI Product Management Intern | May 2025 - December 2025
+*Vollie, Inc.* | *Buffalo, New York*
 
 - Owned 0-to-1 MVP of voice AI coaching platform as sole PM; landed **first paying client (30 employees)** and triggered a seed funding milestone.
 - Designed closed-loop voice AI engine with real-time transcription, sentiment and commitment scoring, auto-generated reports, and privacy-first data model.
