@@ -44,7 +44,7 @@ AI Product Engineer shipping production AI agents end-to-end with Claude Code an
 
 ## Projects
 
-- **Career-Ops Pipeline (github.com/Shivyyyy-git):** AI job-search platform built on Claude Code and Markdown-based development; scans portals, evaluates JDs, generates tailored CVs, tracks applications end-to-end.
+- **Career-Ops Pipeline:** AI job-search platform built on Claude Code and Markdown-based development; scans portals, evaluates JDs, generates tailored CVs, tracks applications end-to-end.
 - **VentureForge, Ain Center for Entrepreneurship:** AI strategy simulation for **50+** MBA students and self-serve validation tooling for **200+** founders, replacing **$25K/year** in licensed tools and cutting mentor prep time by **75%**.
 
 ---

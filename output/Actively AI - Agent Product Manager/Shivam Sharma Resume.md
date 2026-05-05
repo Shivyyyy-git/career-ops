@@ -6,21 +6,20 @@ shivamsharma2023@gmail.com | (585) 481-9927 | [linkedin.com/in/shivamsharma-ai](
 
 ## Summary
 
-AI Product Engineer with an MS in Artificial Intelligence (STEM) from Simon Business School. Build and ship production AI agents end-to-end using Claude Code — from architecture to deployment for non-technical users. Built Maya AI serving **200K+ enterprise users** on Oracle CCS across voice, chat, SMS, email, and mobile; prior co-founder with two exits totaling **$575K** across 3 continents.
+AI Agent Product Manager with an MS in AI in Business (STEM) from Simon Business School and **6+ years combined AI agent + GTM-operator experience**. Build and ship production AI agents end-to-end using Claude Code — from architecture to deployment for non-technical operators. Built **Maya AI**, a per-account multi-channel agent on Oracle CCS for **200K+ residents** across voice, chat, SMS, email, and mobile (NEP); 70-80% first-touch autonomous; built solo in 2.5 months. Prior co-founder with two exits totaling **$575K**, **$200K** marketing-automation budget across **200+ agency clients in UK + MENA**, **$5M+ deals influenced**.
 
 ---
 
 ## Professional Experience
 
-### AI Product Engineer | January 2026 - Present
+### AI Agent Product Manager | January 2026 - Present
 *ESC Partners* | *Rochester, New York*
 
-- Built the full AI operating layer for **Maya AI** on Oracle CCS, unifying voice, chat, SMS, email, and mobile into one agent that understands customer intent and executes transactions autonomously.
-- Shipped autonomous transaction execution across billing, payment plans, start/stop service, and outage support; handles **70-80%** of first-touch support volume, removing **100+** manual emails per manager per day.
-- Shipped supervisor cockpit: real-time sentiment analysis, performance tracking, and one-click human takeover so non-technical managers stay in control.
+- **Designed and shipped Maya AI — a per-account multi-channel agent on Oracle CCS — embedded directly with NEP supervisors** to unify voice, chat, SMS, email, and mobile; the agent classifies intent, retrieves the right Oracle data, and executes billing/payment/outage transactions autonomously, escalating to a human only when confidence drops.
+- **Designed and deployed a standalone email-triage agent** for NEP — built on Maya AI's core intelligence (Claude Code) — routes, drafts, and auto-sends customer-support email; reduces 100+ manual manager emails per day; deployed by spinning up a dedicated workflow per customer scenario.
+- **Built the supervisor cockpit + enablement playbook** for Maya AI — real-time conversation feed, sentiment scoring, agent takeover button, plus the operator runbook NEP supervisors use day-to-day; transferred trust from human-led to agent-led service in three weekly cycles of co-design with frontline supervisors.
 - Integrated 11 Labs for **26-language** voice coverage; deployed at NEP (**200K+** residents), rolling out at Moreno Valley Electrical Utility, piloting at Delta Utilities.
 - Built end-to-end in **2.5 months** as the sole AI person at the company. Stack: FastAPI, AWS Bedrock, n8n, React, Microsoft Teams, Outlook, Claude Code.
-- Shipped standalone email triage agent on Maya's core intelligence (Claude Code) — routes, drafts, and sends resident support emails autonomously at NEP.
 
 ### AI Product Consultant | October 2025 - January 2026
 *Senior Assisted Living Locators* | *Remote*
@@ -44,8 +43,8 @@ AI Product Engineer with an MS in Artificial Intelligence (STEM) from Simon Busi
 ### Co-Founder | July 2019 - March 2024
 *CloudApproach and Approachables (Acquired)* | *United Kingdom + MENA*
 
-- Bootstrapped and sold two ventures for **$575K combined** ($325K + $250K) with **95% client retention** post-acquisition.
-- Managed **$200K** marketing and automation budget influencing **$5M+** in closed deals across UK and MENA; scaled to **200+ agency clients** and **80+ real-estate partners**.
+- **Bootstrapped a GTM-operator track across 200+ agency clients in UK + MENA** — managed **$200K** marketing-automation + CRM + creative-services budget across the agency portfolio; **influenced $5M+ in closed deals**; built the seller-side automation infrastructure that AI revenue platforms now sell to.
+- **95%** client retention through dual exits totaling **$575K** ($325K + $250K).
 
 ---
 
@@ -64,8 +63,8 @@ Leadership: VP, Masters Advisory Council; Simon Strong Community Builder Award.
 
 ## Projects
 
+- **Conference Outreach Agent for the CRO:** 3-workflow per-account outreach pipeline — AI generates personalized outreach + posts to Microsoft Teams as adaptive cards; approve/skip webhooks send approved emails via Outlook automatically; edit form lets the CRO revise AI-drafted copy before sending. Built embedded with the CRO; the same loop pattern that GTM-AI agents need at advertiser scale. Stack: n8n, Claude Code, Microsoft Teams + Outlook.
 - **VaultIQ:** Internal air-gapped financial intelligence platform running Claude Opus on AWS Bedrock; extracts line items, surfaces trends, and generates predictions from analyst documents without data leaving the customer VPC. Stack: Next.js, Postgres/pgvector, Terraform, SSO, role-based access.
-- **Conference Outreach Automation:** 3-workflow outreach system for the CRO targeting Oracle CIS conference attendees — Teams adaptive card approvals, Outlook sending, edit form for AI-drafted copy. Stack: n8n, Claude Code.
 - **Career-Ops Pipeline:** AI job-search pipeline built on Claude Code — scans portals, evaluates JDs, generates tailored CVs and cover letters, tracks applications end-to-end.
 - **City of Rochester, Fraud Detection ML System — Simon Vision Consulting engagement:** Explainable ML model (XGBoost, SHAP) improving accuracy from **62% to 73%**; enhanced decision transparency for loan officers.
 
@@ -73,6 +72,6 @@ Leadership: VP, Masters Advisory Council; Simon Strong Community Builder Award.
 
 ## Skills
 
-- **AI & Platform:** Claude Code, AWS Bedrock, Claude (Opus, Sonnet, Nova), Prompt Engineering, Intent Classification, LLM Evaluation, RAG, Conversational AI Agents, HITL Design, Multi-Tenant SaaS, 11 Labs Voice.
+- **Product:** Per-Account Agent Design, Forward-Deployed Customer Embed, HITL Approval Workflows, Enablement Playbook Authoring, GTM-Product Operator (200+ agency clients), 0-to-1 AI Product Strategy, Discovery, Roadmapping, PRDs, Prioritization (RICE, MoSCoW), Experimentation, P&L Ownership.
+- **AI & Platform:** Multi-Channel Agent Orchestration, Per-Account Agent Architecture, Claude Code, AWS Bedrock, Claude (Opus, Sonnet, Nova), Prompt Engineering, Intent Classification, LLM Evaluation, SQL Analytics (Postgres/pgvector), RAG, Conversational AI Agents, HITL Design, Multi-Tenant SaaS, 11 Labs Voice, n8n Workflow Orchestration.
 - **Stack:** FastAPI, React, Next.js, Python, n8n, Postgres/pgvector, Terraform, DynamoDB, Oracle CCS, REST/OpenAPI, OAuth2, Microsoft Teams, Microsoft Outlook.
-- **Product:** 0-to-1 Product Strategy, Discovery, Roadmapping, PRDs, Prioritization (RICE, MoSCoW), GTM, Experimentation, HITL Design.
