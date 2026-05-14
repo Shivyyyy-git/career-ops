@@ -24,18 +24,15 @@ modes/_profile.md
 .update-dismissed
 .update-lock
 
-# Secrets (never commit — use .env.example as template)
+# Secrets — never commit (use .env.example as template)
 .env
+.env.*
+!.env.example
 
 # Generated
 .resolved-prompt-*
 node_modules/
 bun.lock
-
-# Secrets — never commit
-.env
-.env.*
-!.env.example
 
 # OS
 .DS_Store
