@@ -1,0 +1,11 @@
+Dear Glean Hiring Team,
+
+I am applying for Product Manager, AI Quality on the Glean Model Hub. The role reads like the work I already do: pick the right model for the job, manage the inference vendor relationship, project cost and capacity, and walk customers into upgrades that actually change the outcome.
+
+I built Maya AI at ESC Partners, the AI operating layer behind HometownHUB, our utility client experience. Maya sits on top of Oracle CCS and handles billing, payment plans, start/stop service, and outage support across voice, chat, SMS, email, and mobile. The interesting part for this role: Maya runs a small Model Hub of its own. Claude Sonnet handles the high-volume intent and transactional turns. Claude Opus handles the harder reasoning paths and the supervisor-facing summaries. Nova Pro picks up the cheap, latency-sensitive classification. I own that routing layer end-to-end, including the Bedrock relationship, the cost and capacity projections, the eval loop, and the upgrade path when a new model lands. Maya is live at NEP (200K+ residents), rolling out at Moreno Valley Electrical Utility, and piloting at Delta Utilities.
+
+The customer-facing side is what makes this stick. I shipped 17 admin APIs and a supervisor cockpit so non-technical managers can govern the model layer themselves: real-time sentiment, performance tracking, one-click human takeover, and a per-tenant audit trail. That is the same problem Glean is solving for enterprises picking and upgrading LLMs without a research team in the room. On Senior Assisted Living Locators, I cut Bedrock spend ~70% on a 300+ weekly consultation product through two-phase pre-filtering, the same unit-econ thinking I would bring to the Model Hub.
+
+I am 4+ years into building and shipping B2B products, the last 14 months specifically as an AI PM and engineer in production. I am open to relocation and ready to commit to the SF Bay Area hybrid. STEM OPT now, H-1B eligible.
+
+<p>You can see Maya behind <a href="https://ai-sales-assistant-frontend.onrender.com/">a live SALL demo</a>, a <a href="https://www.youtube.com/watch?v=eCkP7_ZI348">walkthrough video</a>, and the rest of my work at <a href="https://shivamsportfolio.webflow.io/">shivamsportfolio.webflow.io</a>. I would love to talk about the Model Hub roadmap.</p>

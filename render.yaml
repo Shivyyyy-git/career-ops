@@ -1,0 +1,32 @@
+# Career-Ops — Render Blueprint (Phase 1 MVP)
+#
+# Cron jobs moved to GitHub Actions (see .github/workflows/). Render hosts
+# only the Streamlit web service. Node 20 is installed during the build
+# because the dashboard's "Run scan now" button shells out to scan.mjs.
+#
+# Env vars marked `sync: false` prompt in the Render UI; no secrets in git.
+
+services:
+  - type: web
+    name: career-ops-dashboard
+    runtime: python
+    plan: free
+    buildCommand: |
+      curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+      apt-get install -y nodejs
+      npm install
+      pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
+    envVars:
+      - key: GMAIL_USER
+        sync: false
+      - key: GMAIL_APP_PASSWORD
+        sync: false
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_REGION
+        value: us-east-1
+      - key: DASHBOARD_URL
+        sync: false

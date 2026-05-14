@@ -1,0 +1,14 @@
+Dear Deloitte Hiring Team,
+
+I build AI products and ship them. In the last six months: **Maya AI**, an AI operating layer on Oracle CCS for a 200K-resident utility client; a **standalone email triage agent** I spun off Maya's core intelligence; **VaultIQ**, an air-gapped financial intelligence platform on Claude Opus and AWS Bedrock; a **3-workflow conference outreach automation** for our CRO; and, honestly, the **Career-Ops Pipeline I built on Claude Code to apply for this role**. Before ESC Partners, I co-founded and exited two ventures across the UK and MENA — $575K combined exit value, 200+ agency clients, $5M+ in agency-side deals influenced, 95% post-acquisition retention.
+
+Maya is what I am most proud of. Utility companies run everything on Oracle CCS — billing, payment plans, service requests, outages. When a customer reaches out, a human agent logs in, digs through Oracle, and manually responds. Maya sits on top of Oracle CCS and does that automatically across voice, chat, SMS, email, and mobile. It understands intent, pulls the right data, and executes the transaction. When confidence is low, it drafts a response, posts to a supervisor as a Microsoft Teams adaptive approval card, and waits for one click before sending. 26 languages via 11 Labs. Real-time sentiment, live dashboards, one-click human takeover. Live at NEP (200K+ residents), rolling out at Moreno Valley Electrical Utility, piloting at Delta Utilities. ~$225K/month projected savings. I built it in 2.5 months as the only AI engineer on staff.
+
+The Product Engineering seat reads like the next-scale version of how I already work. The JD's preferred quals — AI for product management effectiveness, building AI-enabled applications, lean PM craft, P&L accountability — are what I have been doing for the last 18 months. I find the part of a workflow where AI changes the outcome, build it on Claude Code, and make sure non-technical people can use it without me in the room. I have done that at one company for one enterprise client; doing it at PxE scale across practices and engagements is the opportunity I am looking for.
+
+Honest disclosure on tenure: by formal "Product Manager" title I am at ~1.5 years. By scope of work — 4.7 years owning product P&L as founder running CRM, marketing automation, and creative products for 200+ agency clients across the UK and MENA, plus 1.5 years shipping production AI to enterprise — I am at ~6.2 years. The "lean product management or related roles" phrasing in the JD is what makes this match work; the proof is in what is shipped, not the boxes held.
+
+Available immediately. Open to relocation across any of the 78 PxE locations.
+
+**Shivam Sharma**
+shivamsharma2023@gmail.com | (585) 481-9927 | [linkedin.com/in/shivamsharma-ai](https://www.linkedin.com/in/shivamsharma-ai/) | [shivamsportfolio.webflow.io](https://shivamsportfolio.webflow.io/)

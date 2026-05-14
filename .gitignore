@@ -5,7 +5,6 @@ data/pipeline.md
 data/scan-history.tsv
 reports/*.md
 !reports/.gitkeep
-output/*
 !output/.gitkeep
 batch/logs/*
 !batch/logs/.gitkeep
@@ -17,8 +16,10 @@ jds/*
 !jds/.gitkeep
 
 # User config and customization (never auto-updated)
+# NOTE: portals.yml was removed from this list so the Render web service can
+# run scan.mjs at runtime. portals.yml contains no secrets — only company
+# names, public careers URLs, and title filters.
 config/profile.yml
-portals.yml
 modes/_profile.md
 .update-dismissed
 .update-lock
@@ -31,6 +32,11 @@ modes/_profile.md
 node_modules/
 bun.lock
 
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
 # OS
 .DS_Store
 *.mov
@@ -41,3 +47,6 @@ bun.lock
 .claude/memory/
 career-dashboard
 package-lock.json
+
+__pycache__/
+*.pyc
