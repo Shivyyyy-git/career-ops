@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivam Sharma - Application Q&A - Sarvam AI Product Manager On-Device and Edge AI</title>
+<style>
+  @page { size: Letter; margin: 0.55in 0.7in; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: 'Calibri', 'Aptos', 'Segoe UI', 'Helvetica', 'Arial', sans-serif; font-size: 10.5pt; line-height: 1.35; color: #000; background: #fff; }
+  .page { width: 100%; max-width: 7.0in; margin: 0 auto; padding: 0; }
+  h1 { font-size: 16pt; font-weight: 700; margin-bottom: 4px; }
+  h2 { font-size: 12pt; font-weight: 700; margin-top: 14px; margin-bottom: 6px; border-bottom: 1px solid #000; padding-bottom: 2px; }
+  p { margin-bottom: 8px; text-align: left; }
+  p strong { font-weight: 700; }
+  ul, ol { margin: 6px 0 8px 22px; }
+  li { margin-bottom: 3px; }
+  .intro { font-size: 9.5pt; color: #444; font-style: italic; margin-bottom: 6px; }
+  a { color: #0563c1; text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="page">
+<h1>Application Q&amp;A: Sarvam AI Product Manager On-Device and Edge AI</h1>
+<p class="intro">Pre-filled answers for the Sarvam On-Device application form and likely screen-1 questions. Same human-tone rules as the resume: no em-dashes, no AI tells, plain English, concrete examples. Update as the conversation evolves.</p>
+
+<h2>Why Sarvam AI and why the on-device line?</h2>
+<p>Sovereign Indian AI is the most important infrastructure bet on the subcontinent for the next decade. On-device sovereign AI is where Sarvam's biggest moat sits: Sarvam Kaze wearable glasses, silicon partnerships with Qualcomm + Intel + NVIDIA, and an enterprise customer base (Tata Capital, SBI Life, CRED, IDFC, LIC) that needs data residency on Indian rails. Putting sovereign models on the customer's own silicon is what changes the economics for a billion users.</p>
+<p>The enterprise on-device surface (multi-tenant, role-based access, MDM-integrated, audit-grade reliability) is where I have been shipping for the last five months at smaller scale on VaultIQ and Maya AI. The Sarvam seat lets me run that surface at platform scale with silicon-level optimization.</p>
+
+<h2>Why this role?</h2>
+<p>Eight lines from the JD describe how I already work:</p>
+<ol>
+<li><strong>Own roadmap for on-device inference, enterprise deployment, fleet management.</strong> VaultIQ runs inside the customer VPC; Maya AI deploys phased across utilities (NEP, Moreno Valley, Delta).</li>
+<li><strong>Define features for IT admin personas, enterprise auth, Microsoft ecosystem.</strong> Maya AI integrates with Microsoft Teams and Outlook. SSO and OAuth2 are shipped on both VaultIQ and Maya AI.</li>
+<li><strong>Drive B2B GTM alignment by translating customer pain points into product requirements.</strong> Two weeks of NEP supervisor sit-throughs before Maya AI was scoped. Five-advisor observation at SALL before scoring was written.</li>
+<li><strong>Run iterative experiments in enterprise deployments.</strong> Shadow-channel A/B for every new Bedrock model. Takeover-frequency as the regression signal.</li>
+<li><strong>Multi-tenant SaaS: tenant isolation, access controls, admin tooling.</strong> Maya AI: DynamoDB tenant governance, role-based access, 17 admin APIs, 24-hour key rotation.</li>
+<li><strong>HITL and agentic workflows with enterprise-grade reliability and auditability.</strong> Supervisor cockpit with one-click human takeover. Every agent action logged with reasoning and operator override.</li>
+<li><strong>Security and compliance: data residency, SSO/SAML/SCIM, regulatory.</strong> VaultIQ runs inside the customer VPC with no data egress. SSO and OAuth2 shipped. SAML/SCIM is a one-week ramp from where I sit.</li>
+<li><strong>Define and track metrics measuring enterprise engagement, retention, workflow depth.</strong> Maya AI: per-tenant SLOs, intent-level reliability, supervisor takeover frequency.</li>
+</ol>
+
+<h2>Tell me about a time you shipped on-device or air-gapped enterprise AI.</h2>
+<p>VaultIQ. ESC had a customer in financial intelligence who could not put analyst documents into a managed cloud LLM under any condition: regulatory, contractual, and competitive reasons all pointed at "the data must not leave the VPC."</p>
+<p>I architected and shipped VaultIQ on Claude Opus running inside the customer VPC: Next.js front end, Postgres with pgvector for retrieval, Terraform for repeatable customer-perimeter deployment, SSO for identity, role-based access controls so analysts and senior leadership see different surfaces. The eval framework includes data-residency verification, role-correctness tests, and audit-log completeness.</p>
+<p>VaultIQ is not strictly on-device (it runs inside a VPC, not on a laptop or a wearable), but the deployment perimeter, data-residency rigor, and customer-trust mechanics are the same. The transferable reflexes are exactly what enterprise on-device AI needs.</p>
+
+<h2>Tell me about your enterprise authentication and Microsoft ecosystem experience.</h2>
+<p>Maya AI is deeply integrated with Microsoft Teams (adaptive cards for HITL approval) and Outlook (the email-triage agent). The supervisor cockpit uses SSO over OAuth2 for identity. Role-based access controls are enforced through DynamoDB tenant governance with per-tenant key rotation.</p>
+<p>Where I am honest: I have not directly shipped Entra ID, Intune MDM, SAML, or SCIM as their own products. The transferable rigor is multi-tenant SaaS, OAuth2 SSO, role-based access, and Microsoft Teams + Outlook integration as production surfaces. SAML and SCIM follow naturally from the OAuth2 patterns I already ship. Entra ID and Intune are a first-30-days ramp at Sarvam, not a foundation gap.</p>
+
+<h2>How do you think about HITL and agentic workflows for enterprise reliability?</h2>
+<ul>
+<li><strong>Confidence has to be a first-class signal.</strong> Maya AI returns a confidence score on every action. Below threshold, the agent does not act. It drafts and routes to a human reviewer.</li>
+<li><strong>Auditability lives in the data model, not the dashboard.</strong> Every agent action logs the reasoning, the input context, and the operator override. Dashboards read from that, not the other way around.</li>
+<li><strong>Takeover-frequency is the regression signal.</strong> If operators are overriding the agent more often after a model update, the model regressed. Shadow-channel for two weeks before full rollout.</li>
+<li><strong>HITL is a product, not a fallback.</strong> The supervisor cockpit at Maya AI is a first-class surface, designed for non-technical operators to feel in control. UX matters more than backend correctness for adoption.</li>
+</ul>
+
+<h2>How do you handle structured product experiments in enterprise deployments?</h2>
+<p>Phased rollout with explicit gates. Maya AI: NEP first (200K residents, deep deployment), then Moreno Valley Electrical, then Delta Utilities pilot. Each phase has an entry criterion (takeover frequency below 15%, confidence calibration within X bands, operator NPS above Y) and a kill criterion. New Bedrock models go through a two-week shadow channel against production traffic before any rollout. Cost-latency-accuracy tradeoffs are negotiated per intent (routine billing on Nova, complex outage triage on Sonnet, high-stakes escalations on Opus), not globally.</p>
+
+<h2>Have you worked with IT admin and enterprise buyer personas?</h2>
+<p>Yes, across three engagements.</p>
+<p><strong>NEP utility IT and operations:</strong> daily working sessions with the supervisor team and IT operations on Oracle CCS integration, key rotation policy, and audit log retention. The IT admin persona is the one who gates whether Maya AI ships to additional residents.</p>
+<p><strong>CloudApproach + Approachables enterprise sales (UK + MENA):</strong> 200+ agency clients, 80+ real-estate partners. IT admin sign-off was the gating step for every contract. Built the muscle for translating IT concerns (data residency, audit logs, MDM policy) into product features.</p>
+<p><strong>VaultIQ customer:</strong> the IT admin team set the entire deployment perimeter. Multi-week working sessions on VPC topology, Terraform deployment, and role-based access scoping.</p>
+
+<h2>What is your background, and how does it map to CS or EE preferred?</h2>
+<p>I have a Master of Science in AI in Business (STEM-certified) from Simon Business School and a Bachelor of Arts (Honors) in International Business and Management from the University of Central Lancashire. The CS / EE substance I ship comes from production work: VaultIQ deployment architecture, Maya AI multi-tenant SaaS, RAG on Postgres with pgvector, Bedrock routing, the Claude Code build loop. The non-CS degree is an honest framing reality. The shipped systems should answer the technical depth question more clearly than the diploma does.</p>
+
+<h2>What is your biggest accomplishment?</h2>
+<p><strong>Career-wise:</strong> Bootstrapping and selling CloudApproach + Approachables for $575K combined. Two ventures across UK and MENA. 200+ agency clients. 80+ real-estate partners. $5M+ in enterprise deals influenced. Two exits before I turned 25.</p>
+<p><strong>Last six months:</strong> VaultIQ shipped as the air-gapped Claude Opus atom inside the customer VPC. Maya AI live at NEP with 200K+ residents in 2.5 months. Both as the sole AI on staff at ESC.</p>
+
+<h2>Why are you leaving your current role?</h2>
+<p>Scope and stage. ESC has been a great place to ship VaultIQ and Maya AI for one customer at a time, but my next role should put me inside a team where on-device sovereign AI becomes the product line at platform scale, with silicon-level optimization across phones, glasses, laptops, and vehicles. Sarvam is that team.</p>
+
+<h2>Compensation expectations?</h2>
+<p>Open to the Sarvam range. Priority is total package plus equity at unicorn stage given the velocity. Happy to discuss INR or USD denomination depending on the relocation outcome.</p>
+
+<h2>When can you start?</h2>
+<p>Immediately for remote. Two-week handoff at ESC for VaultIQ and Maya AI roadmaps. If Bengaluru on-site is required, I can be on the ground within 30 to 45 days of offer (visa logistics permitting).</p>
+
+<h2>Work authorization and location?</h2>
+<p>I am Indian by nationality, currently US-based on STEM OPT through 2027, H-1B eligible. If Sarvam is hard-Bengaluru on-site for this seat, I would relocate to India for the right role. The on-device line works with silicon partners that include US-based companies (Qualcomm in San Diego, Intel in Santa Clara, NVIDIA in Santa Clara, Apple in Cupertino), so a remote-from-US window for the first 6 to 12 months might actually be a strategic fit. Happy to discuss either way.</p>
+
+<h2>How did you hear about this role?</h2>
+<p>Found through the Sarvam careers page directly. The Sarvam Kaze glasses launch and the silicon-partnership announcements have been on my radar; the seat surfaced naturally.</p>
+
+<h2>Anything else you want us to know?</h2>
+<p>Three proof links if you want to see the work:</p>
+<ul>
+<li>SALL live: https://ai-sales-assistant-frontend.onrender.com/</li>
+<li>SALL walkthrough: https://www.youtube.com/watch?v=eCkP7_ZI348</li>
+<li>Portfolio: https://shivamsportfolio.webflow.io/</li>
+</ul>
+<p>Happy to walk through VaultIQ's air-gapped deployment architecture in code, or share a one-page enterprise rollout framework for how I would scope the next phase of Sarvam's on-device line.</p>
+</div>
+</body>
+</html>
