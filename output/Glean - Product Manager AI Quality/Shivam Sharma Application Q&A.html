@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivam Sharma - Application Q&A - Glean Product Manager AI Quality</title>
+<style>
+  @page { size: Letter; margin: 0.55in 0.7in; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: 'Calibri', 'Aptos', 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.35;
+    color: #000;
+    background: #fff;
+  }
+  .page { width: 100%; max-width: 7.0in; margin: 0 auto; padding: 0; }
+  h1 {
+    font-size: 16pt;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #000;
+  }
+  h2 {
+    font-size: 12pt;
+    font-weight: 700;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    color: #000;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+  }
+  p { margin-bottom: 8px; text-align: left; }
+  p strong { font-weight: 700; color: #000; }
+  ul, ol { margin: 6px 0 8px 22px; }
+  li { margin-bottom: 3px; }
+  .intro { font-size: 9.5pt; color: #444; font-style: italic; margin-bottom: 6px; }
+  a { color: #0563c1; text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>Application Q&amp;A: Glean, Product Manager, AI Quality</h1>
+  <p class="intro">Pre-filled answers for the Glean application form and likely screen-1 questions. Same human-tone rules as the resume.</p>
+
+  <h2>Why Glean?</h2>
+  <p>Glean is the rare AI company where the platform thesis and the product reality have actually caught up to each other. <strong>$200M ARR</strong>, Series F at <strong>$7.2B</strong>, 1,000+ employees, 50+ industries. The Work AI category exists because Glean shipped it. That is the kind of velocity I want to be inside.</p>
+  <p>Model Hub specifically is the bet I've already been making one customer at a time. At ESC I built Maya AI's routing layer across Claude Opus, Sonnet, and Nova on AWS Bedrock for a 200K-resident utility. Picking the right model for the right query, watching confidence, surfacing cost, giving operators a one-click takeover. The platform version of that is exactly Model Hub. Doing it for thousands of enterprises instead of one is the natural next step.</p>
+  <p>The leadership stack matters too. Arvind shipped Search at Google for a decade. Tamar ran the same surface plus Slack's CPO seat. Emrecan came up at Stripe, LinkedIn, and Amazon. That is product gravity I want to learn from.</p>
+
+  <h2>Why this role?</h2>
+  <p>Five things from the JD line up exactly with how I already work:</p>
+  <ol>
+    <li><strong>"Evaluate LLM models, define roadmap for growing LLM portfolio."</strong> Maya AI evaluates Bedrock model selection daily for intent and response routing. I've built the evaluation framework, the routing logic, and the cost-tracking dashboard.</li>
+    <li><strong>"Manage relationships with inference and model providers."</strong> Direct working experience with AWS Bedrock and 11 Labs in production. I haven't led a contract, but I've shipped the integration layer that the contract governs.</li>
+    <li><strong>"Own projections of LLM usage, cost, and capacity planning."</strong> Two-phase pre-filter at SALL cut API costs by 70%. Maya AI tracks cost-per-call and projected savings (~$225K/month at NEP).</li>
+    <li><strong>"Drive customer enablement and upgrade adoption journey for latest LLMs."</strong> ESC: supervisor cockpit onboarding for non-technical operators. Rolling Maya AI from NEP to Moreno Valley to Delta is the same upgrade-adoption motion.</li>
+    <li><strong>"Build processes that scale through rapid growth."</strong> ESC: first AI hire, built backlog, eval framework, UAT process, supervisor onboarding flow from scratch. CloudApproach: ran two ventures simultaneously, sales-delivery-hiring-ops process from zero.</li>
+  </ol>
+  <p>The AI Quality framing is also the right one for me. Simon Vision Consulting on the City of Rochester fraud-detection engagement was about lifting accuracy from 62% to 73% with XGBoost + SHAP, and making the model's decisions auditable. Quality metrics and explainability were the deliverable, not the by-product.</p>
+
+  <h2>Tell me about a time you took ownership and delivered results.</h2>
+  <p>Maya AI is the cleanest example. ESC had no AI track when I joined. The CRO wanted Oracle CCS to be smarter, faster, and multi-channel. There was no design doc, no eval framework, no team.</p>
+  <p>I started with two weeks of customer discovery at NEP. Sat with supervisors. Watched them dig through Oracle CCS to answer a single resident question. Mapped the workflow. Found the failure points: language barriers, response time, manual data entry, no escalation path.</p>
+  <p>I wrote a one-page product narrative. Picked the stack: AWS Bedrock for model routing, n8n for workflow orchestration, FastAPI for the integration layer, React for the supervisor cockpit, Microsoft Teams adaptive cards for human approval, 11 Labs for 26-language voice.</p>
+  <p>I built it on Claude Code, end-to-end, in <strong>2.5 months</strong>. Single AI hire. Maya AI is live at NEP with <strong>200K+ residents</strong>, rolling out at Moreno Valley Electrical, piloting at Delta Utilities. It handles <strong>70 to 80%</strong> of first-touch support autonomously and removes <strong>100+</strong> manager emails per day. Projected savings at NEP are around <strong>$225K per month</strong>.</p>
+  <p>Founder mode is how I worked then. It is how I work now.</p>
+
+  <h2>How do you think about building with LLMs at scale?</h2>
+  <p>Three opinions from shipping Maya AI:</p>
+  <p><strong>Confidence is the first-class signal.</strong> Every Maya call returns a confidence score. Below threshold, the agent does not act. It drafts and routes to a supervisor via Teams. We track confidence distributions per intent, per channel, per model. That is how we know whether to invest in prompt engineering, retraining, or a different model.</p>
+  <p><strong>Cost is a product decision, not an engineering one.</strong> SALL's two-phase pre-filter cut API costs by 70% by running a cheap classifier first. At Maya AI, we route easier queries to Nova and reserve Opus for the hard ones. Picking the model is a product call because it shapes the user experience.</p>
+  <p><strong>Upgrade adoption is a UX problem.</strong> When Bedrock launched a new Claude model, we didn't flip a switch. We A/B'd it on a shadow channel for two weeks, watched the takeover-frequency metric for regressions, then rolled it out by channel. Customer enablement is sequencing, not communication.</p>
+
+  <h2>How do you use AI in your own product craft?</h2>
+  <p>I prototype on Claude Code daily. The supervisor cockpit at ESC, the email-triage agent, and the React console all started as Claude Code sessions before any code shipped. The 8-factor scoring algorithm at SALL was sketched in Markdown specs, prompted into Claude, then refined. My PRDs are usually conversations with a model first, written documents second.</p>
+  <p>If you want a code-level demo, I'm happy to walk through Maya AI's routing layer or share a Loom of one of the n8n workflows.</p>
+
+  <h2>What AI tools are you currently using today and how are you using them?</h2>
+  <ul>
+    <li><strong>Claude Code:</strong> my daily driver. Maya AI's supervisor cockpit, email-triage agent, React console, and FastAPI handlers all started as Claude Code sessions before any code shipped. PRDs are usually Claude conversations first, written documents second. The 8-factor scoring algorithm at SALL was sketched in Markdown, prompted into Claude, then refined into production code over a weekend.</li>
+    <li><strong>AWS Bedrock:</strong> production routing layer for Maya AI. I route across Claude Opus (hard agent-of-record decisions), Claude Sonnet (default conversational tier), and Nova (cheap classifier-style intent extraction). Confidence distributions and cost-per-call drive the routing. This is exactly the work the Model Hub PM seat would do at platform scale.</li>
+    <li><strong>n8n:</strong> orchestrator for three production agentic workflows. Conference Outreach (AI drafts, Microsoft Teams approval cards, Outlook auto-send), Maya AI's email-triage routing, and the supervisor approval flow with adaptive cards. Lets me give non-technical operators a clear surface to see, edit, and pause every agent action.</li>
+    <li><strong>11 Labs:</strong> voice surface for Maya AI's 26-language coverage. Non-English speakers call the utility and reach an agent who answers in their first language without translation friction.</li>
+    <li><strong>Claude (web app), ChatGPT, Perplexity:</strong> mixed deliberately for thinking work. Claude for product brainstorming and writing, ChatGPT for second-opinion checks, Perplexity for fact-finding with citations. Same routing logic as Maya AI, applied to my own product craft.</li>
+    <li><strong>Cursor and GitHub Copilot:</strong> in-editor pair-programming when I am working inside a long-lived codebase rather than sketching from scratch.</li>
+  </ul>
+  <p>What changed when I started shipping with these tools daily: I went from waiting on engineering capacity to shipping most product ideas in hours instead of weeks. The 2.5-month Maya AI build is the proof. I do not think a PM can lead AI product anymore without operating these tools at the production layer.</p>
+
+  <h2>What is your biggest accomplishment?</h2>
+  <p><strong>Career-wise:</strong> Bootstrapping and selling CloudApproach plus Approachables for <strong>$575K combined</strong>. Two ventures across UK and MENA, 200+ agency clients, 80+ real-estate partners, $5M+ in deals influenced, 95% client retention post-acquisition. Two exits before I turned 25.</p>
+  <p><strong>Last six months:</strong> Maya AI live at NEP with <strong>200K+ residents</strong> in <strong>2.5 months</strong> as the sole AI on staff. The team had never shipped AI before. They have shipped it now.</p>
+
+  <h2>Why are you leaving your current role?</h2>
+  <p>Scope and stage. ESC has been a great place to build Maya AI, but my next role should put me inside a Work AI platform where the LLM strategy I've been shipping one customer at a time becomes the product. Glean is the team for that.</p>
+
+  <h2>Compensation expectations?</h2>
+  <p>The posted range ($160K to $240K base + equity + benefits) is in line with what I'm looking for. I'd target the upper end given the substance match with Model Hub and the Series F context. Open to discussing structure once we are aligned on scope.</p>
+
+  <h2>When can you start?</h2>
+  <p>Immediately. Two-week handoff at ESC for the Maya AI roadmap and supervisor cockpit. Day-one work in parallel.</p>
+
+  <h2>Are you authorized to work in the United States?</h2>
+  <p>I'm on STEM OPT (F-1 visa) through 2027 and am H-1B eligible. Glean's scale (1,000+ employees, 25+ countries) suggests an established sponsorship program. Happy to walk through timing in our first conversation.</p>
+
+  <h2>How did you hear about this role?</h2>
+  <p>Found through LinkedIn. Glean is one of the few enterprise-AI companies whose JD reads like the job I already do, so I applied same day.</p>
+
+  <h2>Open to relocation?</h2>
+  <p>Yes. Open to San Francisco within 30 days of offer. Comfortable with hybrid 3 to 4 days in office.</p>
+
+  <h2>Anything else you want us to know?</h2>
+  <p>Three proof links if you want to see the work:</p>
+  <ul>
+    <li>SALL live: <a href="https://ai-sales-assistant-frontend.onrender.com/">ai-sales-assistant-frontend.onrender.com</a></li>
+    <li>SALL walkthrough: <a href="https://www.youtube.com/watch?v=eCkP7_ZI348">youtube.com/watch?v=eCkP7_ZI348</a></li>
+    <li>Portfolio: <a href="https://shivamsportfolio.webflow.io/">shivamsportfolio.webflow.io</a></li>
+  </ul>
+  <p>Happy to walk through a code-level Maya AI dive at any point in the loop, especially the routing-and-confidence layer that maps cleanly to Model Hub.</p>
+
+</div>
+</body>
+</html>

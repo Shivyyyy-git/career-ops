@@ -6,7 +6,7 @@ shivamsharma2023@gmail.com | (585) 481-9927 | linkedin.com/in/shivamsharma-ai | 
 
 ## Summary
 
-**AI Product Manager/Engineer** (MS, AI in Business, STEM, Simon Business School). Builds and ships production AI agents end-to-end on **Claude Code**. At ESC as first AI hire, owned **Maya AI** from vision to launch in **2.5 months**: an autonomous, event-driven agent platform on Oracle CCS, live at a **200K-resident utility**. Two prior exits totaling **$575K** as co-founder. **Drawn to Guild.ai because the control plane for agents is the same problem I have been solving from the customer side, and the builder-first philosophy maps directly to how I work.**
+**AI Product Manager/Engineer** (MS, AI in Business, STEM, Simon Business School). Builds and ships production AI agents end-to-end on **Claude Code**. At ESC as first AI hire, owned **Maya AI** from vision to launch in **2.5 months**: an autonomous, event-driven agent platform on Oracle CCS, live at a **200K-resident utility**. Two prior exits totaling **$575K** as co-founder. **Drawn to Bobyard because automating senior-estimator work in an industry stuck on PDFs and rulers is the same vertical-AI bet I have been shipping at ESC, and the founder-operates-the-roadmap model is how I have always worked.**
 
 ---
 
@@ -28,7 +28,7 @@ shivamsharma2023@gmail.com | (585) 481-9927 | linkedin.com/in/shivamsharma-ai | 
 
 **Co-Founder** | *CloudApproach and Approachables (Acquired)* | UK + MENA | July 2019 to March 2024
 
-- **Bootstrapped and sold two ventures** for **$575K combined** ($325K + $250K) with **95%** post-acquisition retention. Managed a **$200K** marketing and automation budget that influenced **$5M+** in closed deals. Scaled to **200+** agency clients and **80+** real-estate partners. Led acquisition diligence and post-sale handoff for both businesses.
+- **Bootstrapped and exited two ventures** across UK and MENA: **$575K combined**, **95%** post-acquisition retention, **200+** agency clients, **80+** real-estate partners, **$5M+** in deals influenced on a **$200K** marketing budget.
 
 ---
 

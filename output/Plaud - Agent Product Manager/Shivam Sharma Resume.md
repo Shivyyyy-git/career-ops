@@ -6,13 +6,13 @@ shivamsharma2023@gmail.com | (585) 481-9927 | linkedin.com/in/shivamsharma-ai | 
 
 ## Summary
 
-**AI Product Manager/Engineer** (MS, AI in Business, STEM, Simon Business School). Builds and ships production AI agents end-to-end on **Claude Code**. At ESC as first AI hire, owned **Maya AI** from vision to launch in **2.5 months**: an autonomous, event-driven agent platform on Oracle CCS, live at a **200K-resident utility**. Two prior exits totaling **$575K** as co-founder. **Drawn to Guild.ai because the control plane for agents is the same problem I have been solving from the customer side, and the builder-first philosophy maps directly to how I work.**
+**AI Product Manager/Engineer** (MS, AI in Business, STEM, Simon Business School). Builds and ships production AI agents end-to-end on **Claude Code**. At ESC as first AI hire, owned **Maya AI** from vision to launch in **2.5 months**: an autonomous, event-driven agent platform on Oracle CCS, live at a **200K-resident utility**. Two prior exits totaling **$575K** as co-founder. **Drawn to Plaud because architecting an agent tooling ecosystem (Ground Truth evals, SOTA prompts, tool quantity and quality) is the same loop I run at ESC, where Maya AI ships every agent action through confidence scoring and a supervisor cockpit with one-click human takeover.**
 
 ---
 
 ## Professional Experience
 
-**AI Product Manager/Engineer** | *ESC Partners* | Rochester, NY | January 2026 to Present
+**AI Product Engineer** | *ESC Partners* | Rochester, NY | January 2026 to Present
 
 - **Owned Maya AI end-to-end as the first AI hire:** an autonomous, event-driven AI agent platform on Oracle CCS that unifies voice, chat, SMS, email, and mobile for a **200K-resident utility client**. Customer discovery with utility supervisors, INVEST stories, UAT. Handles billing, payment, and outage transactions; **11 Labs 26-language voice**; **70 to 80%** of first-touch volume autonomous; **~$225K/month** projected savings.
 - **Shipped the supervisor cockpit with HITL approval workflow** so non-technical operators stay in control. Real-time sentiment, performance dashboards, one-click human takeover. Set confidence, sentiment, and takeover frequency as service-level objectives. Built end-to-end in **2.5 months** as the sole AI on staff, prototyping daily on Claude Code.
@@ -28,7 +28,7 @@ shivamsharma2023@gmail.com | (585) 481-9927 | linkedin.com/in/shivamsharma-ai | 
 
 **Co-Founder** | *CloudApproach and Approachables (Acquired)* | UK + MENA | July 2019 to March 2024
 
-- **Bootstrapped and sold two ventures** for **$575K combined** ($325K + $250K) with **95%** post-acquisition retention. Managed a **$200K** marketing and automation budget that influenced **$5M+** in closed deals. Scaled to **200+** agency clients and **80+** real-estate partners. Led acquisition diligence and post-sale handoff for both businesses.
+- **Bootstrapped and exited two ventures** across UK and MENA: **$575K combined**, **95%** post-acquisition retention, **200+** agency clients, **80+** real-estate partners, **$5M+** in deals influenced on a **$200K** marketing budget.
 
 ---
 

@@ -19,8 +19,9 @@ jds/*
 # NOTE: portals.yml was removed from this list so the Render web service can
 # run scan.mjs at runtime. portals.yml contains no secrets — only company
 # names, public careers URLs, and title filters.
+# NOTE: modes/_profile.md is tracked so personal delivery rules sync to cloud
+# Claude sessions. config/profile.yml stays ignored (contains comp data).
 config/profile.yml
-modes/_profile.md
 .update-dismissed
 .update-lock
 

@@ -8,6 +8,10 @@ The portfolio that goes with this system is also open source: [cv-santiago](http
 
 **It will work out of the box, but it's designed to be made yours.** If the archetypes don't match your career, the modes are in the wrong language, or the scoring doesn't fit your priorities -- just ask. You (AI Agent) can edit the user's files. The user says "change the archetypes to data engineering roles" and you do it. That's the whole point.
 
+## Personal Delivery Rules (Binding, Persistent)
+
+**READ `modes/_profile.md` AT THE START OF EVERY SESSION.** Those rules are binding for every user-facing artifact in this repo (resume, cover letter, Application Q&A, LinkedIn DMs, application-form answers) — not just inside the career-ops skill. They cover: ESC role-title allowlist, no orphan lines under 3 words, four-pass audit before delivery, human tone (no em-dashes, no AI tells), output folder + file naming, Application Q&A companion document, LinkedIn outreach messages per JD, never mention Career-Ops in user-facing deliverables, every md artifact also needs .html + .pdf, learn from corrections on the same turn. Treat `modes/_profile.md` as canonical; this file is the index.
+
 ## Data Contract (CRITICAL)
 
 There are two layers. Read `DATA_CONTRACT.md` for the full list.

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivam Sharma - Resume - Freed Product Manager</title>
+<style>
+  @page { size: Letter; margin: 0.3in 0.5in; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: 'Calibri', 'Aptos', 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+    font-size: 10pt;
+    line-height: 1.2;
+    color: #000;
+    background: #fff;
+  }
+  .page { width: 100%; max-width: 7.5in; margin: 0 auto; padding: 0; }
+  .header { text-align: center; margin-bottom: 6px; }
+  .header h1 {
+    font-size: 15pt;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    line-height: 1.15;
+    margin-bottom: 2px;
+    color: #000;
+  }
+  .contact-row { font-size: 10pt; line-height: 1.3; color: #000; }
+  .contact-row a { color: #0563c1; text-decoration: underline; }
+  .contact-sep { padding: 0 3px; }
+  .section { margin-top: 3px; }
+  .section-title {
+    font-size: 10.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #000;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+    margin-bottom: 6px;
+  }
+  .summary-text { font-size: 10pt; line-height: 1.2; color: #000; }
+  .summary-text strong { font-weight: 700; }
+  .job { margin-bottom: 3px; }
+  .role-header, .company-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .role-header { margin-bottom: 0; }
+  .company-header { margin-bottom: 1px; }
+  .role-title { font-size: 10.5pt; font-weight: 700; color: #000; }
+  .company-name { font-size: 10pt; font-weight: 700; color: #000; }
+  .job-period {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: #000;
+    white-space: nowrap;
+    text-align: right;
+  }
+  .job-location {
+    font-size: 10pt;
+    font-weight: 700;
+    color: #000;
+    white-space: nowrap;
+    text-align: right;
+  }
+  .job ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 17px;
+    margin-top: 3px;
+  }
+  .job li {
+    display: list-item;
+    list-style-type: disc;
+    font-size: 10pt;
+    line-height: 1.22;
+    color: #000;
+    margin-bottom: 2px;
+  }
+  .job li strong, .projects-list strong, .edu-main strong { font-weight: 700; color: #000; }
+  .edu-item { margin-bottom: 3px; }
+  .edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .edu-main { font-size: 10.5pt; color: #000; }
+  .edu-school { font-weight: 700; }
+  .edu-degree { font-weight: 700; }
+  .edu-honors { font-size: 10pt; font-style: italic; color: #000; }
+  .edu-year {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: #000;
+    white-space: nowrap;
+    text-align: right;
+  }
+  .projects-list {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 17px;
+  }
+  .projects-list li {
+    display: list-item;
+    list-style-type: disc;
+    font-size: 10pt;
+    line-height: 1.22;
+    color: #000;
+    margin-bottom: 2px;
+  }
+  .skills-list { font-size: 10pt; line-height: 1.3; color: #000; }
+  .skill-line { margin-bottom: 2px; }
+  .skill-category { font-weight: 700; color: #000; }
+  a { color: #000; white-space: nowrap; }
+  .avoid-break, .job, .edu-item { break-inside: avoid; page-break-inside: avoid; }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { padding: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header avoid-break">
+    <h1>SHIVAM SHARMA</h1>
+    <div class="contact-row">
+      <a href="mailto:shivamsharma2023@gmail.com">shivamsharma2023@gmail.com</a>
+      <span class="contact-sep">|</span>
+      <span>(585) 481-9927</span>
+      <span class="contact-sep">|</span>
+      <a href="https://www.linkedin.com/in/shivamsharma-ai/">linkedin.com/in/shivamsharma-ai</a>
+      <span class="contact-sep">|</span>
+      <a href="https://shivamsportfolio.webflow.io/">shivamsportfolio.webflow.io</a>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Summary</div>
+    <div class="summary-text"><strong>AI Product Manager/Engineer</strong> (MS, AI in Business, STEM, Simon Business School). Builds and ships production AI agents end-to-end on <strong>Claude Code</strong>. At ESC as first AI hire, owned <strong>Maya AI</strong> from vision to launch in <strong>2.5 months</strong>: an autonomous, event-driven agent platform on Oracle CCS, live at a <strong>200K-resident utility</strong>. Two prior exits totaling <strong>$575K</strong> as co-founder. <strong>Drawn to Freed because building AI that gives non-technical experts hours of their day back is the same product motion I have shipped at ESC, where Maya AI saves utility supervisors 100+ manual emails a day and projects roughly $225K per month in operational lift.</strong></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Professional Experience</div>
+
+    <div class="job avoid-break">
+      <div class="role-header">
+        <div class="role-title">AI Product Manager</div>
+        <div class="job-period">January 2026 to Present</div>
+      </div>
+      <div class="company-header">
+        <div class="company-name">ESC Partners</div>
+        <div class="job-location">Rochester, New York</div>
+      </div>
+      <ul>
+        <li><strong>Owned Maya AI end-to-end as the first AI hire:</strong> an autonomous, event-driven AI agent platform on Oracle CCS that unifies voice, chat, SMS, email, and mobile for a <strong>200K-resident utility client</strong>. Customer discovery with utility supervisors, INVEST stories, UAT. Handles billing, payment, and outage transactions; <strong>11 Labs 26-language voice</strong>; <strong>70 to 80%</strong> of first-touch volume autonomous; <strong>~$225K/month</strong> projected savings.</li>
+        <li><strong>Shipped the supervisor cockpit with HITL approval workflow</strong> so non-technical operators stay in control. Real-time sentiment, performance dashboards, one-click human takeover. Set confidence, sentiment, and takeover frequency as service-level objectives. Built end-to-end in <strong>2.5 months</strong> as the sole AI on staff, prototyping daily on Claude Code.</li>
+        <li><strong>Led cross-functional delivery</strong> across ESC engineering, NEP operations, Moreno Valley Electrical, and Delta Utilities. Shipped a standalone email-triage agent on Maya's core intelligence, live at NEP. Spun off <strong>VaultIQ</strong>, an air-gapped Claude Opus financial intelligence platform that runs inside the customer VPC.</li>
+      </ul>
+    </div>
+
+    <div class="job avoid-break">
+      <div class="role-header">
+        <div class="role-title">AI Product Consultant</div>
+        <div class="job-period">October 2025 to January 2026</div>
+      </div>
+      <div class="company-header">
+        <div class="company-name">Senior Assisted Living Locators</div>
+        <div class="job-location">Remote</div>
+      </div>
+      <ul>
+        <li><strong>Shipped an AI recommendation product</strong> for <strong>5 advisors</strong> processing <strong>300+ weekly consultations</strong>, matching senior families to <strong>250+ communities</strong> in under <strong>2 seconds</strong>. Designed an <strong>8-factor scoring algorithm with two-phase pre-filter</strong> cutting <strong>API costs ~70%</strong> while keeping advisor recommendations consistent across the team.</li>
+      </ul>
+    </div>
+
+    <div class="job avoid-break">
+      <div class="role-header">
+        <div class="role-title">AI Product Management Intern</div>
+        <div class="job-period">May 2025 to December 2025</div>
+      </div>
+      <div class="company-header">
+        <div class="company-name">Vollie, Inc.</div>
+        <div class="job-location">Buffalo, New York</div>
+      </div>
+      <ul>
+        <li><strong>Owned the 0-to-1 MVP</strong> of a voice AI coaching platform as <strong>sole PM</strong>. Landed the <strong>first paying client (30 employees)</strong> and triggered a seed funding milestone. Designed a closed-loop voice engine with real-time transcription, sentiment and commitment scoring, auto-generated reports, and a privacy-first data model.</li>
+      </ul>
+    </div>
+
+    <div class="job avoid-break">
+      <div class="role-header">
+        <div class="role-title">Co-Founder</div>
+        <div class="job-period">July 2019 to March 2024</div>
+      </div>
+      <div class="company-header">
+        <div class="company-name">CloudApproach and Approachables (Acquired)</div>
+        <div class="job-location">United Kingdom + MENA</div>
+      </div>
+      <ul>
+        <li><strong>Bootstrapped and exited two ventures</strong> across UK and MENA: <strong>$575K combined</strong>, <strong>95%</strong> post-acquisition retention, <strong>200+</strong> agency clients, <strong>80+</strong> real-estate partners, <strong>$5M+</strong> in deals influenced on a <strong>$200K</strong> marketing budget.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Education</div>
+
+    <div class="edu-item">
+      <div class="edu-row">
+        <div class="edu-main edu-school">Simon Business School, University of Rochester</div>
+        <div class="edu-year">New York</div>
+      </div>
+      <div class="edu-row">
+        <div class="edu-main edu-degree">Master of Science in AI in Business (STEM-Certified)</div>
+        <div class="edu-year">December 2025</div>
+      </div>
+      <div class="edu-honors">Leadership: Vice President, Masters Advisory Council. Simon Strong Community Builder Award.</div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-row">
+        <div class="edu-main edu-school">University of Central Lancashire</div>
+        <div class="edu-year">Preston, United Kingdom</div>
+      </div>
+      <div class="edu-row">
+        <div class="edu-main edu-degree">Bachelor of Arts (Honors), International Business and Management</div>
+        <div class="edu-year">May 2020</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Projects</div>
+    <ul class="projects-list">
+      <li><strong>City of Rochester Fraud Detection (Simon Vision Consulting):</strong> Built an explainable ML model (<strong>XGBoost</strong> with <strong>SHAP</strong> attribution) lifting accuracy from <strong>62% to 73%</strong>. Delivered model evaluation, quality metrics, and human-readable explanations so loan officers could see exactly why every loan application was flagged.</li>
+    </ul>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Skills</div>
+    <div class="skills-list">
+      <div class="skill-line"><span class="skill-category">Product:</span> 0-to-1 Strategy, Customer Discovery, Product Narratives, Voice of the Customer, INVEST Stories, MVP and Prototyping, Cross-Functional Alignment, RICE / MoSCoW, Roadmap, Founder Mentality.</div>
+      <div class="skill-line"><span class="skill-category">AI, Agents, Stack:</span> Autonomous Agents, Event-Driven AI, Agent Orchestration, HITL Approval, Claude Code, AWS Bedrock, Claude (Opus, Sonnet, Nova), LLM Evaluation, RAG, Intent Classification, 11 Labs Voice, FastAPI, React, Next.js, Python, n8n, Microsoft Teams, Microsoft Outlook, Postgres with pgvector, Terraform, DynamoDB, REST APIs, OAuth2, Git workflows on GitHub.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
