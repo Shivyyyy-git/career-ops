@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivam Sharma - Cover Letter - Morgan Stanley AI Product Manager</title>
+<style>
+  @page { size: Letter; margin: 0.55in 0.7in; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: 'Calibri', 'Aptos', 'Segoe UI', 'Helvetica', 'Arial', sans-serif; font-size: 10.5pt; line-height: 1.35; color: #000; background: #fff; }
+  .page { width: 100%; max-width: 7.0in; margin: 0 auto; padding: 0; }
+  p { margin-bottom: 9px; text-align: left; }
+  p strong { font-weight: 700; color: #000; }
+  .greeting { margin-bottom: 9px; }
+  .signature { margin-top: 8px; }
+  .signature .name { font-weight: 700; font-size: 11pt; color: #000; }
+  .signature .contact { font-size: 9.5pt; color: #000; }
+  .signature .contact a { color: #000; text-decoration: none; }
+  a { color: #0563c1; text-decoration: underline; }
+  .signature a { color: #000; text-decoration: none; }
+  .proof-list { margin: 6px 0 9px 0; font-size: 10pt; }
+  .proof-list li { margin-bottom: 2px; list-style: none; }
+</style>
+</head>
+<body>
+<div class="page">
+  <p class="greeting">Dear Firmwide AI and Technology COO team,</p>
+  <p>Just applied to the AI Product Manager role. Sending this because the posting describes a problem I have already had to solve at much smaller scale, and because there are two things about my background you should know before a screen rather than after it.</p>
+  <p>I built the supervisor cockpit for <strong>Maya AI</strong> because "the agent is live" is not a number anyone can act on. So every conversation started carrying a confidence score, a sentiment reading, and a takeover record, and that instrumentation is what let us say with evidence that <strong>70 to 80%</strong> of first-touch volume was being handled autonomously rather than just believing it was. I am the first AI hire at ESC Partners. I built Maya AI end to end in <strong>2.5 months</strong> on FastAPI, AWS Bedrock, n8n, React, and Claude Code, and it now runs for a <strong>200K-resident utility</strong> with two more in rollout. Governance came first, not last: approvals route through Microsoft Teams adaptive cards so a named person signs off before the agent acts, and DynamoDB tenant governance keeps three utility deployments from ever seeing each other's data.</p>
+  <p>Measuring one AI agent across 200,000 residents taught me the thing that scales: adoption is the easy number, and the hard ones are how often a human had to take over, how confident the system was when it did not, and what the saved time actually turned into.</p>
+  <p>That is why <strong>DevGen.AI</strong> is the Morgan Stanley number I keep coming back to. Roughly <strong>280,000 developer hours</strong> saved on nine million lines of legacy code is, as far as I can tell, the one hard GenAI figure the Firm has published, and it is a numerator. Saved hours only become value when capacity is deliberately redeployed. Meanwhile <strong>98% of Financial Advisor teams</strong> already use the AI @ Morgan Stanley Assistant, which means the adoption question is largely answered and the harder ones are next: weekly actives against enabled seats, depth cohorts instead of headcount, how often an answer gets overridden. And when <strong>SR 26-2</strong> replaced SR 11-7 in April, it put generative and agentic AI outside the scope of model risk guidance while leaving the governance obligation fully intact. Nobody outside the Firm can tell you what good looks like here. It has to be defined internally, by someone, which is exactly the work this posting describes.</p>
+  <p>Two things I will not pretend about. I have never worked inside an organization of Morgan Stanley's size, and I have not used Tableau or Power BI. What I have done is build the reporting surfaces myself in React over a FastAPI service, define the metrics they display, and defend those definitions to the people being measured by them. I also built <strong>VaultIQ</strong>, an air-gapped financial intelligence platform running Claude Opus on AWS Bedrock entirely inside the customer's VPC, where SSO and role-based access decide which analysts see which slices. It does not make me a financial services veteran. It does mean I have never had the luxury of designing an AI system first and adding the controls afterward.</p>
+  <p>Before ESC I bootstrapped and exited two ventures across UK and MENA, <strong>$575K combined</strong>, <strong>95%</strong> post-acquisition retention, on a <strong>$200K</strong> budget I owned and reported on quarterly. I have been the person accountable for the number, not just the person producing it.</p>
+  <ul class="proof-list">
+    <li>SALL live: <a href="https://ai-sales-assistant-frontend.onrender.com/">ai-sales-assistant-frontend.onrender.com</a></li>
+    <li>SALL walkthrough: <a href="https://www.youtube.com/watch?v=eCkP7_ZI348">youtube.com/watch?v=eCkP7_ZI348</a></li>
+    <li>Portfolio: <a href="https://shivamsportfolio.webflow.io/">shivamsportfolio.webflow.io</a></li>
+  </ul>
+  <div class="signature">
+    <div class="name">Shivam Sharma</div>
+    <div class="contact"><a href="mailto:shivamsharma2023@gmail.com">shivamsharma2023@gmail.com</a> | (585) 481-9927 | <a href="https://www.linkedin.com/in/shivamsharma-ai/">linkedin.com/in/shivamsharma-ai</a> | <a href="https://shivamsportfolio.webflow.io/">shivamsportfolio.webflow.io</a></div>
+  </div>
+</div>
+</body>
+</html>

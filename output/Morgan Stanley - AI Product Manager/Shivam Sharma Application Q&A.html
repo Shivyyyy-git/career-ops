@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivam Sharma - Application Q&amp;A - Morgan Stanley AI Product Manager</title>
+<style>
+  @page { size: Letter; margin: 0.55in 0.7in; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: 'Calibri', 'Aptos', 'Segoe UI', 'Helvetica', 'Arial', sans-serif; font-size: 10.5pt; line-height: 1.35; color: #000; background: #fff; }
+  .page { width: 100%; max-width: 7.0in; margin: 0 auto; padding: 0; }
+  h1 { font-size: 16pt; font-weight: 700; margin-bottom: 4px; }
+  h2 { font-size: 12pt; font-weight: 700; margin-top: 14px; margin-bottom: 6px; border-bottom: 1px solid #000; padding-bottom: 2px; }
+  h3 { font-size: 10.5pt; font-weight: 700; margin-top: 10px; margin-bottom: 4px; }
+  p { margin-bottom: 8px; text-align: left; }
+  p strong { font-weight: 700; }
+  ul, ol { margin: 6px 0 8px 22px; }
+  li { margin-bottom: 3px; }
+  .intro { font-size: 9.5pt; color: #444; font-style: italic; margin-bottom: 6px; }
+  a { color: #0563c1; text-decoration: underline; }
+  h2, h3 { break-after: avoid; page-break-after: avoid; }
+</style>
+</head>
+<body>
+<div class="page">
+<h1>Application Q&amp;A: Morgan Stanley, AI Product Manager</h1>
+<p class="intro">Pre-filled answers for the Morgan Stanley application form and likely screen-one questions. Same tone rules as the resume: plain English, concrete examples, no em-dashes, nothing invented. Update freely as the conversation evolves.</p>
+<h2>Why Morgan Stanley?</h2>
+<p>Morgan Stanley published one hard GenAI number that I keep coming back to. DevGen.AI processed roughly nine million lines of legacy code and saved about 280,000 developer hours. That is a numerator, and the interesting question is what those hours converted into. Saved time only becomes value when the capacity is deliberately redeployed, and across the industry most reported time savings never show up as a measurable outcome. Closing that gap is the difference between a reporting function and a vanity dashboard, and it is the part of this job I actually want.</p>
+<p>The second reason is timing. Ninety-eight percent of Financial Advisor teams already use the AI @ Morgan Stanley Assistant, so the Firm is past the adoption-evangelism stage that most enterprises are still stuck in. The remaining questions are harder and more interesting: weekly actives against enabled seats, depth cohorts rather than headcount, how often an answer gets corrected or overridden, and what any of it is worth. Those are the questions I built for Maya AI, one product at a time. Doing it across a portfolio, at 80,000-person scale, is the version of the problem I want next.</p>
+<p>The third reason is that nobody outside the Firm can tell you what good looks like yet. When SR 26-2 replaced SR 11-7 in April, it explicitly placed generative and agentic AI outside the scope of model risk guidance while leaving the general governance obligation fully intact. The definitions of adoption, quality, and control effectiveness for GenAI have to be built internally. That is a rare thing to get to work on.</p>
+<h2>Why this role specifically?</h2>
+<p>The posting says it wants builders who love to build. Most people applying to a data and reporting PM req have consumed adoption dashboards. I have been on the producer side of the number. At ESC I decided what "first-touch autonomous containment" meant, chose the denominator, and then had to defend that choice to the operations managers being measured by it.</p>
+<p>Measurement frameworks written by people who have never shipped an agent tend to measure seat counts. I know which numbers move because I picked them.</p>
+<h2>Tell me about a time you turned data into a product decision.</h2>
+<p>Maya AI is the clearest one. Once the agent was live at NEP, nobody could answer a basic question: was it actually working? "The agent is handling emails" is not something an operations manager can act on.</p>
+<p>So I built the supervisor cockpit. Every conversation carries a confidence score on the response, a sentiment reading, and a record of whether a human took over. Then I set three things as the reported measures of quality: autonomous containment, confidence distribution, and takeover frequency, tracked per intent and per channel rather than as one blended number.</p>
+<p>The per-intent split is what changed decisions. Blended containment looked healthy. Broken out, one intent category had a takeover rate several times the others, which told us the problem was not the model, it was that a specific workflow needed a different approval threshold. We changed the threshold for that intent alone instead of degrading the whole system. That is the kind of read you only get if the instrumentation was designed with the decision in mind.</p>
+<h2>What is your experience with dashboards and reporting platforms?</h2>
+<p>Honest answer first: I have not used Tableau or Power BI. If your team lives in a governed warehouse with published workbooks, that is a genuine ramp for me and I would rather say so now.</p>
+<p>What I have done is build the reporting layer myself. The Maya AI supervisor cockpit is a React front end over a FastAPI service, with conversation state and history in DynamoDB, surfacing live sentiment, confidence scoring, agent performance, and one-click human takeover to non-technical utility operations managers. I defined the metrics, built the surface, and then had to defend the definitions to the people the numbers described. My SQL is application SQL against Postgres, not warehouse modeling with window functions.</p>
+<p>The transferable part is not the tool. It is knowing that a metric nobody trusts is worse than no metric, and that the argument about the denominator is the real work.</p>
+<h2>What do you know about measuring GenAI adoption in a regulated environment?</h2>
+<p>Four opinions I actually hold:</p>
+<ul>
+<li><strong>Seat counts are the vanity layer.</strong> Enabled seats, then weekly actives against enabled seats, then depth cohorts, then task-level outcomes. Most programs stop at layer one and call it adoption.</li>
+<li><strong>Time saved is an input, not a result.</strong> The number only becomes value if the freed capacity is deliberately redeployed, and that redeployment has to be tracked separately or the whole benefit case is unfalsifiable.</li>
+<li><strong>Quality signals have to be first class.</strong> Confidence, override rate, correction rate, and human takeover frequency tell you where a system is weak. At ESC I tracked these per intent because blended numbers hide exactly the problems you need to find.</li>
+<li><strong>Governance telemetry serves two audiences at once.</strong> The takeover rate in my cockpit told operations where the agent was weak and told supervisors where the controls were holding. A firmwide reporting layer has to produce both reads from the same data.</li>
+</ul>
+<h2>Where are the gaps in your background for this role?</h2>
+<p>I would rather name these than have them found.</p>
+<ul>
+<li><strong>I have not worked inside a large, complex organization.</strong> My largest context is one where I am the entire AI function. I have shipped into a regulated utility serving 200K residents across three tenant deployments with approval gates, which is the closest structural analogue I have, but it is not a matrixed firm with Internal Audit and a Technology COO org.</li>
+<li><strong>No Tableau or Power BI.</strong> Covered above.</li>
+<li><strong>What I have is security and access governance, not data governance.</strong> Tenant isolation, RBAC, SSO, and key rotation are not a data catalog, lineage, stewardship, or a data quality SLA. I have never been through an audit of a data asset.</li>
+<li><strong>Every AI metric I own is a metric for a product I built myself.</strong> I have never run adoption reporting across a portfolio of use cases owned by other teams, and the politics of that are real.</li>
+<li><strong>My data science record is one project.</strong> XGBoost with SHAP on the City of Rochester fraud detection engagement through Simon Vision Consulting, accuracy from 62% to 73%, built so loan officers could see why an application was flagged.</li>
+</ul>
+<h2>Are the numbers on your resume measured or modeled?</h2>
+<p>Worth being precise, especially for this team.</p>
+<ul>
+<li><strong>70 to 80% first-touch containment:</strong> measured, but on definitions I set. Happy to walk through the denominator.</li>
+<li><strong>Roughly $225K per month savings:</strong> projected, not realized. It is a client-side model built from displaced handling time, and I would not present it as a booked benefit.</li>
+<li><strong>API cost reduction of roughly 70% at SALL:</strong> measured, comparing per-consultation cost before and after the two-phase pre-filter.</li>
+<li><strong>62% to 73% accuracy lift:</strong> measured on a held-out set.</li>
+</ul>
+<h2>What AI tools do you use hands-on today?</h2>
+<ul>
+<li><strong>Claude Code:</strong> daily driver. Maya AI's cockpit, the email-triage agent, the React console, and the FastAPI handlers all started as Claude Code sessions.</li>
+<li><strong>AWS Bedrock:</strong> production routing across Claude Opus, Sonnet, and Nova, chosen per intent on cost and latency rather than one model everywhere.</li>
+<li><strong>n8n:</strong> orchestration for the approval and triage workflows.</li>
+<li><strong>Python:</strong> FastAPI services, plus XGBoost and SHAP on the fraud detection work.</li>
+<li><strong>Claude, ChatGPT, and Perplexity</strong> for research and thinking work; <strong>Cursor</strong> and <strong>GitHub Copilot</strong> inside long-lived codebases.</li>
+</ul>
+<h2>What is your biggest accomplishment?</h2>
+<p><strong>Career:</strong> bootstrapping and selling CloudApproach and Approachables for $575K combined across UK and MENA, with 95% client retention after acquisition.</p>
+<p><strong>Recent:</strong> Maya AI live at a 200K-resident utility in 2.5 months as the only AI person at the company. ESC had never shipped AI before. It has now, and there are two more utilities in rollout.</p>
+<h2>Why are you leaving your current role?</h2>
+<p>Scope, and the kind of problem I want next. ESC has been a good place to build, but I am the entire AI function there, measuring products I built myself. I want to work on the version of this problem where the systems belong to other teams and the measurement has to be negotiated rather than declared. That is a harder job and I think it is the right one for me now.</p>
+<h2>Compensation expectations?</h2>
+<p>The posted range is $120,000 to $165,000 and I am comfortable working inside it, anchored toward the top given the scope. One clarifying question I would ask early: what corporate title does this role carry, Associate, Vice President, or Executive Director? The posting says "Director Level," which I understand is a job-family label rather than a rung on the Analyst / Associate / VP / ED ladder, and the answer changes what the total package looks like.</p>
+<h2>When can you start?</h2>
+<p>Two to four weeks. I would want to hand off the Maya AI roadmap and the supervisor cockpit properly rather than walk out mid-rollout.</p>
+<h2>Are you authorized to work in the US? Will you require sponsorship?</h2>
+<p>I am authorized to work now on STEM OPT under my F-1. I will require H-1B sponsorship in the future and I am cap-subject, so the earliest lottery would be March 2027. I would rather confirm early that Morgan Stanley supports STEM OPT and cap-gap for this seat than find out at offer stage.</p>
+<h2>Are you open to relocating to New York?</h2>
+<p>Yes. I am in Rochester now and would relocate to New York for this role. I would want the in-office expectation in writing, since public information about the Firm's policy is inconsistent, and I would want to understand whether relocation support exists at this band.</p>
+<h2>How did you hear about this role?</h2>
+<p>Found through LinkedIn.</p>
+<h2>Anything else you want us to know?</h2>
+<p>Three links if you want to see the work rather than read about it:</p>
+<ul>
+<li>SALL live: <a href="https://ai-sales-assistant-frontend.onrender.com/">https://ai-sales-assistant-frontend.onrender.com/</a></li>
+<li>SALL walkthrough: <a href="https://www.youtube.com/watch?v=eCkP7_ZI348">https://www.youtube.com/watch?v=eCkP7_ZI348</a></li>
+<li>Portfolio: <a href="https://shivamsportfolio.webflow.io/">https://shivamsportfolio.webflow.io/</a></li>
+</ul>
+<p>Happy to walk through the Maya AI cockpit and how the containment metric was defined, or to sketch a one-page GenAI measurement framework for a portfolio of internal use cases as a working session.</p>
+</div>
+</body>
+</html>

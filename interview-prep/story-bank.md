@@ -78,3 +78,21 @@ This file accumulates your best interview stories over time. Each evaluation (Bl
 **R (Result):** Compliance-grade AI product live for the first regulated-finance customer. The Terraform pattern is now reusable for future customers — onboarding time drops from "weeks" to "hours."
 **Reflection:** The frontline insight (the security team's VPC requirement) was the one that would have killed the project if surfaced 6 weeks later. Sitting with their team early caught it. Same lesson for any forward-deployed AI seat: the customer's RevOps/security/IT team will surface compliance/integration constraints that the AE didn't think to mention; the Forward Deployed PM has to be in the room to catch them before they're sunk cost.
 **Best for questions about:** "Tell me about a time a customer pushed back on your design," "How do you handle compliance and security requirements?", "Describe a mid-build pivot," "Tell me about turning a setback into a reusable pattern," "How do you embed with technical/security stakeholders?"
+
+### [Government Fraud Detection / Explainability] City of Rochester fraud model with defensible reason codes
+**Source:** Report #119 — Lexor — AI Forward Deployed Engineer
+**S (Situation):** The City of Rochester needed better fraud screening on a city loan program (Simon Vision Consulting engagement). The existing process caught fraud at 62% accuracy, and officers had no way to justify why an application was flagged — which made every flag a liability in review.
+**T (Task):** Improve detection accuracy AND make every flag defensible by a loan officer in front of an applicant or an auditor. A black-box score was explicitly unacceptable in a government context.
+**A (Action):** Built an XGBoost model with SHAP attribution so each flag decomposed into named, human-readable reason codes. Worked feature engineering against the loan-application data with the constraint that every feature had to be explainable to a non-technical officer. Tuned for review-workload realism, not leaderboard metrics.
+**R (Result):** Accuracy from 62% to 73%, and — the part the client cared about most — reason codes officers could defend in review. Decision transparency became the headline outcome, not the accuracy delta.
+**Reflection:** In government fraud work, the evidence chain is the product; the score is an implementation detail. An auditor who can't defend a flag won't act on it, so explainability isn't a nice-to-have — it decides whether the model gets used at all. This is Lexor's product thesis in miniature.
+**Best for questions about:** "Have you worked on fraud detection?", "How do you build ML for high-stakes/regulated contexts?", "Tell me about explainability in practice," "Why do you care about the government fraud mission?"
+
+### [Founder Ownership / Client-Facing Delivery] CloudApproach + Approachables: build, scale, exit twice
+**Source:** Report #119 — Lexor — AI Forward Deployed Engineer
+**S (Situation):** Two market gaps, zero capital: SMBs in UK/MENA priced out of agency retainers, and real-estate agencies buying fragmented CRM/marketing point solutions.
+**T (Task):** Build both businesses to profitability while personally owning sales, delivery, and support — then exit both cleanly.
+**A (Action):** Bootstrapped CloudApproach to 200+ agency clients and Approachables to 80+ real-estate partners across UK and MENA. Managed a $200K marketing/automation budget influencing $5M+ in client deals. Ran acquisition diligence and transition for both exits: records handoff, retention compliance, client communication.
+**R (Result):** $575K combined exit value; 95% client retention post-acquisition — the buyers kept the entire operation running.
+**Reflection:** Five years of being the person the client calls when something breaks is the real training for forward-deployed work. The 95% retention number is the proof the relationships survived the founder leaving — the delivery system worked without me, which is the standard I hold for anything I now ship at a client.
+**Best for questions about:** "Tell me about your founder background," "Why did you sell your companies?", "How do you handle client relationships under pressure?", "What does ownership mean to you?", "Why are you the ex-founder archetype we want?"
